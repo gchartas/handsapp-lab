@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include handsapp_lab *.css
+recursive-include handsapp_lab *.csv
+recursive-include handsapp_lab *.html
+recursive-include handsapp_lab *.ico
+recursive-include handsapp_lab *.js
+recursive-include handsapp_lab *.json
+recursive-include handsapp_lab *.md
+recursive-include handsapp_lab *.png
+recursive-include handsapp_lab *.py
+recursive-include handsapp_lab *.svg
+recursive-include handsapp_lab *.txt
+recursive-exclude handsapp_lab *.pyc
