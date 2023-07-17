@@ -1,0 +1,35 @@
+{
+ "cards_label": "Laboratory Information Management System",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-07-17 08:55:42.432340",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Laboratory Information",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Protocol",
+   "link_to": "Protocol",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-07-17 12:02:57.745228",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Information",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": []
+}
