@@ -26,6 +26,8 @@
   "book_section",
   "publisher",
   "cb_3",
+  "edition",
+  "city_country",
   "isbnissn",
   "report_section",
   "r_no",
@@ -39,6 +41,7 @@
   "reference_number",
   "paper_section",
   "c_jn",
+  "cb_20",
   "volumeissue",
   "page_numbers",
   "court_decision_section",
@@ -48,9 +51,14 @@
   "court_name",
   "judges",
   "decision_date",
+  "government_body_decision_section",
+  "jurisdiction",
+  "cb_21",
+  "docket_number",
   "citation_section",
   "citation",
-  "attached_copy"
+  "attached_copy",
+  "location_of_hardcopy"
  ],
  "fields": [
   {
@@ -67,7 +75,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Document Type",
-   "options": "\nBook\nReport\nLegislation\nPaper\nStandard\nWebpage\nCourt Decision\nRegional Public Sector Decision"
+   "options": "\nStandard\nBook\nReport\nLegislation\nPaper\nCourt Decision\nGovernment Body Decision"
   },
   {
    "fieldname": "doc_format",
@@ -279,13 +287,53 @@
   {
    "fieldname": "concatenated_authors",
    "fieldtype": "Text",
+   "hidden": 1,
    "label": "Concatenated Authors",
    "read_only": 1
+  },
+  {
+   "fieldname": "government_body_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Government Body Decision"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Small Text",
+   "label": "Jurisdiction"
+  },
+  {
+   "fieldname": "docket_number",
+   "fieldtype": "Data",
+   "label": "Docket Number"
+  },
+  {
+   "fieldname": "location_of_hardcopy",
+   "fieldtype": "Small Text",
+   "label": "Location of Hardcopy"
+  },
+  {
+   "fieldname": "edition",
+   "fieldtype": "Data",
+   "label": "Edition",
+   "translatable": 1
+  },
+  {
+   "fieldname": "city_country",
+   "fieldtype": "Data",
+   "label": "City and Country"
+  },
+  {
+   "fieldname": "cb_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_21",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-19 14:18:58.199190",
+ "modified": "2023-07-19 19:44:23.917598",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Library Management",
@@ -338,7 +386,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "search_fields": "title, standard_number, law_number, official_gazette, case_name",
  "sort_field": "modified",
  "sort_order": "DESC",
