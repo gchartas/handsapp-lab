@@ -1,0 +1,348 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-19 07:51:28.064290",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "doc_format",
+  "cb_1",
+  "doc_type",
+  "sb_1",
+  "title",
+  "source_url",
+  "cb_2",
+  "author",
+  "posting_date",
+  "concatenated_authors",
+  "standard_section",
+  "standard_number",
+  "cb_10",
+  "standard_body",
+  "book_section",
+  "publisher",
+  "cb_3",
+  "isbnissn",
+  "report_section",
+  "r_no",
+  "cb_4",
+  "inst_org",
+  "legislation_section",
+  "law_number",
+  "official_gazette",
+  "cb_5",
+  "m_a",
+  "reference_number",
+  "paper_section",
+  "c_jn",
+  "volumeissue",
+  "page_numbers",
+  "court_decision_section",
+  "case_name",
+  "case_number",
+  "cb_6",
+  "court_name",
+  "judges",
+  "decision_date",
+  "citation_section",
+  "citation",
+  "attached_copy"
+ ],
+ "fields": [
+  {
+   "default": "LID.YY./",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Library ID",
+   "options": "LID.YY./"
+  },
+  {
+   "fieldname": "doc_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "\nBook\nReport\nLegislation\nPaper\nStandard\nWebpage\nCourt Decision\nRegional Public Sector Decision"
+  },
+  {
+   "fieldname": "doc_format",
+   "fieldtype": "Select",
+   "label": "Document Format",
+   "options": "\nElectronic\nHardcopy"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "reqd": 1,
+   "translatable": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "author",
+   "fieldtype": "Table MultiSelect",
+   "label": "Authors",
+   "options": "Library Management Authors Details",
+   "search_index": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Publication Date"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Small Text",
+   "label": "Publisher "
+  },
+  {
+   "fieldname": "isbnissn",
+   "fieldtype": "Data",
+   "label": "ISBN/ISSN"
+  },
+  {
+   "fieldname": "source_url",
+   "fieldtype": "Small Text",
+   "label": "Source URL"
+  },
+  {
+   "fieldname": "law_number",
+   "fieldtype": "Data",
+   "label": "Law Number"
+  },
+  {
+   "fieldname": "official_gazette",
+   "fieldtype": "Small Text",
+   "label": "Official Gazette"
+  },
+  {
+   "fieldname": "volumeissue",
+   "fieldtype": "Data",
+   "label": "Volume/Issue"
+  },
+  {
+   "fieldname": "page_numbers",
+   "fieldtype": "Data",
+   "label": "Page Numbers"
+  },
+  {
+   "fieldname": "case_name",
+   "fieldtype": "Small Text",
+   "label": "Case Name"
+  },
+  {
+   "fieldname": "court_name",
+   "fieldtype": "Small Text",
+   "label": "Court Name"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision Date"
+  },
+  {
+   "fieldname": "case_number",
+   "fieldtype": "Small Text",
+   "label": "Case Number"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sb_1",
+   "fieldtype": "Section Break",
+   "label": "All Document Types"
+  },
+  {
+   "fieldname": "r_no",
+   "fieldtype": "Small Text",
+   "label": "Report Number"
+  },
+  {
+   "fieldname": "inst_org",
+   "fieldtype": "Small Text",
+   "label": "Institution/Organization"
+  },
+  {
+   "fieldname": "m_a",
+   "fieldtype": "Small Text",
+   "label": "Ministry/Authority"
+  },
+  {
+   "fieldname": "c_jn",
+   "fieldtype": "Small Text",
+   "label": "Conference/Journal Name "
+  },
+  {
+   "fieldname": "judges",
+   "fieldtype": "Small Text",
+   "label": "Judges Involved"
+  },
+  {
+   "fieldname": "citation",
+   "fieldtype": "Text",
+   "label": "Citation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attached_copy",
+   "fieldtype": "Attach",
+   "label": "Attached Copy"
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_section",
+   "fieldtype": "Section Break",
+   "label": "Report"
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "legislation_section",
+   "fieldtype": "Section Break",
+   "label": "Legislation"
+  },
+  {
+   "fieldname": "cb_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paper_section",
+   "fieldtype": "Section Break",
+   "label": "Paper"
+  },
+  {
+   "fieldname": "cb_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "citation_section",
+   "fieldtype": "Section Break",
+   "label": "Citation"
+  },
+  {
+   "fieldname": "standard_number",
+   "fieldtype": "Data",
+   "label": "Standard Number",
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "cb_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standard_body",
+   "fieldtype": "Small Text",
+   "label": "Standard Body",
+   "set_only_once": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "standard_section",
+   "fieldtype": "Section Break",
+   "label": "Standard"
+  },
+  {
+   "fieldname": "book_section",
+   "fieldtype": "Section Break",
+   "label": "Book"
+  },
+  {
+   "fieldname": "court_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Court Decisions"
+  },
+  {
+   "fieldname": "concatenated_authors",
+   "fieldtype": "Text",
+   "label": "Concatenated Authors",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-19 14:18:58.199190",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Library Management",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Knowledge Base Contributor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Knowledge Base Editor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "title, standard_number, law_number, official_gazette, case_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "track_changes": 1,
+ "translated_doctype": 1
+}
