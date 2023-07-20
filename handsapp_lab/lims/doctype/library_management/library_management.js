@@ -63,25 +63,25 @@ function generateIeeeCitation(doc) {
     // Generate citation based on document type
     switch (doc.doc_type) {
         case 'Standard':
-            citation = generateCitationLine([doc.title, doc.standard_number, moment(doc.posting_date).format("YYYY") ]);
+            citation = generateCitationLine(["<i>"+doc.title+"</i>", doc.standard_number, moment(doc.posting_date).format("YYYY") ]);
             break;
         case 'Book':
-            citation = generateCitationLine([doc.concatenated_authors, doc.title, doc.edition, doc.city_country, doc.publisher, moment(doc.posting_date).format("YYYY")]);
+            citation = generateCitationLine([doc.concatenated_authors, "<i>"+doc.title+"</i>", doc.edition, doc.city_country, doc.publisher, moment(doc.posting_date).format("YYYY")]);
             break;
         case 'Report':
-            citation = generateCitationLine([doc.concatenated_authors, doc.title, doc.r_no, doc.inst_org]);
+            citation = generateCitationLine([doc.concatenated_authors, "<i>"+doc.title+"</i>", doc.r_no, doc.inst_org]);
             break;
         case 'Legislation':
-            citation = generateCitationLine([doc.official_gazette, moment(doc.posting_date).format("DD.MM.YYYY"), doc.law_number, doc.title, doc.reference_number, doc.m_a ]);
+            citation = generateCitationLine([doc.official_gazette, moment(doc.posting_date).format("DD.MM.YYYY"), doc.law_number, "<i>"+doc.title+"</i>", doc.reference_number, doc.m_a ]);
             break;
         case 'Paper':
-            citation = generateCitationLine([doc.concatenated_authors, doc.title, doc.c_jn, doc.volumeissue, doc.page_numbers, moment(doc.posting_date).format("MMM YYYY") ]);
+            citation = generateCitationLine([doc.concatenated_authors, "<i>"+doc.title+"</i>", doc.c_jn, doc.volumeissue, doc.page_numbers, moment(doc.posting_date).format("MMM YYYY") ]);
             break;
         case 'Court Decision':
             citation = generateCitationLine([doc.case_name, doc.case_number, doc.court_name, moment(doc.decision_date).format("YYYY") ]);
             break;
         case 'Government Body Decision':
-            citation = generateCitationLine([doc.jurisdiction, doc.title, doc.docket_number, moment(doc.posting_date).format("YYYY")]);
+            citation = generateCitationLine([doc.jurisdiction, "<i>"+doc.title+"</i>", doc.docket_number, moment(doc.posting_date).format("YYYY")]);
             break;
     }
 

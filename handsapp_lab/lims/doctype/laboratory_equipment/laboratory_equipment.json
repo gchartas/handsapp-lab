@@ -1,0 +1,335 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-20 08:00:16.776262",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "basic_equipment_information_section",
+  "item",
+  "purchase_date",
+  "w_e_date",
+  "cb_21",
+  "equipment_name",
+  "cb_1",
+  "manufacturer",
+  "model",
+  "s_n",
+  "equipment_specifications_section",
+  "equipment_type",
+  "cb_2",
+  "capacityrange",
+  "cb_3",
+  "resolution",
+  "cb_4",
+  "measurement_uncertainty",
+  "calibration_information_section",
+  "cal_last",
+  "calibration_agency",
+  "cb_5",
+  "cal_next",
+  "cal_attach",
+  "cb_6",
+  "cal_status",
+  "maintenance_information_section",
+  "mnt_last",
+  "cb_7",
+  "mnt_next",
+  "cb_8",
+  "mnt_status",
+  "location_and_usage_section",
+  "current_location",
+  "cb_9",
+  "responsible_person",
+  "cb_10",
+  "eqpt_condition",
+  "cb_20",
+  "equipment_status",
+  "additional_information_section",
+  "lab_eqpt_man",
+  "cb_11",
+  "notescomments",
+  "letter_head"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_equipment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Equipment Information"
+  },
+  {
+   "default": "EqID.YY./",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Equipment ID",
+   "options": "EqID.YY./",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Equipment Name"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "s_n",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Date of Purchase"
+  },
+  {
+   "fieldname": "w_e_date",
+   "fieldtype": "Date",
+   "label": "Warranty Expiration Date"
+  },
+  {
+   "fieldname": "equipment_specifications_section",
+   "fieldtype": "Section Break",
+   "label": "Equipment Specifications"
+  },
+  {
+   "fieldname": "equipment_type",
+   "fieldtype": "Link",
+   "label": "Equipment Type",
+   "options": "Laboratory Equipment Type"
+  },
+  {
+   "fieldname": "capacityrange",
+   "fieldtype": "Data",
+   "label": "Capacity/Range "
+  },
+  {
+   "fieldname": "resolution",
+   "fieldtype": "Data",
+   "label": "Resolution "
+  },
+  {
+   "fieldname": "measurement_uncertainty",
+   "fieldtype": "Float",
+   "label": "Measurement Uncertainty"
+  },
+  {
+   "fieldname": "calibration_information_section",
+   "fieldtype": "Section Break",
+   "label": "Calibration Information"
+  },
+  {
+   "fieldname": "cal_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Calibration Status",
+   "options": "\nCalibrated\nDue for Calibration\nOut of Service"
+  },
+  {
+   "fieldname": "cal_last",
+   "fieldtype": "Date",
+   "label": "Date of Last Calibration"
+  },
+  {
+   "fieldname": "cal_next",
+   "fieldtype": "Date",
+   "label": "Due Date for Next Calibration"
+  },
+  {
+   "fieldname": "cal_attach",
+   "fieldtype": "Attach",
+   "label": "Calibration Certificate"
+  },
+  {
+   "fieldname": "calibration_agency",
+   "fieldtype": "Data",
+   "label": "Calibration Agency"
+  },
+  {
+   "fieldname": "maintenance_information_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Information"
+  },
+  {
+   "fieldname": "mnt_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Maintenance Status",
+   "options": "\nMaintained\nDue for Maintenance\nOut of Service"
+  },
+  {
+   "fieldname": "mnt_last",
+   "fieldtype": "Date",
+   "label": "Date of Last Maintenance"
+  },
+  {
+   "fieldname": "mnt_next",
+   "fieldtype": "Date",
+   "label": "Due Date for Next Maintenance"
+  },
+  {
+   "fieldname": "location_and_usage_section",
+   "fieldtype": "Section Break",
+   "label": "Location and Usage"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Data",
+   "label": "Current Location"
+  },
+  {
+   "fieldname": "eqpt_condition",
+   "fieldtype": "Select",
+   "label": "Equipment Condition",
+   "options": "\nNew\nGood\nFair\nPoor"
+  },
+  {
+   "fieldname": "responsible_person",
+   "fieldtype": "Link",
+   "label": "Responsible Person",
+   "options": "User"
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notescomments",
+   "fieldtype": "Text",
+   "label": "Notes/Comments"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "lab_eqpt_man",
+   "fieldtype": "Table",
+   "label": "Laboratory Equipment Manuals",
+   "options": "Laboratory Equipment Manuals"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "equipment_status",
+   "fieldtype": "Select",
+   "label": "Equipment Status",
+   "options": "\nComissioned\nDecomissioned\nComissioning\nRemoved"
+  },
+  {
+   "fieldname": "cb_21",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-20 10:46:28.400881",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Equipment",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "equipment_name",
+ "translated_doctype": 1
+}

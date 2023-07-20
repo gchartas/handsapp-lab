@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-20 16:05:07.136065",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "responsibility",
+  "cb_4",
+  "responsible_party",
+  "cb_3",
+  "calibration_date",
+  "equipment_information_section",
+  "leid",
+  "cb_1",
+  "equipment_name",
+  "cb_2",
+  "s_n",
+  "calibration_information_section",
+  "calibration_frequency",
+  "cb_5",
+  "calibration_frequency_no",
+  "cb_6",
+  "next_calibration_date",
+  "inhouse_calibration_section",
+  "calibration_template",
+  "calibration_results_section",
+  "certificate",
+  "column_break_gklth",
+  "calibration_status",
+  "amended_from",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "LEC.YY./",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Calibration ID",
+   "options": "LEC.YY./",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Responsibility",
+   "options": "\nUser\nSupplier",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "responsible_party",
+   "fieldtype": "Dynamic Link",
+   "label": "Responsible Party",
+   "options": "responsibility",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "calibration_date",
+   "fieldtype": "Date",
+   "label": "Calibration Date"
+  },
+  {
+   "fieldname": "equipment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Equipment Information"
+  },
+  {
+   "fieldname": "leid",
+   "fieldtype": "Link",
+   "label": "Laboratory Equipment",
+   "options": "Laboratory Equipment"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "leid.equipment_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Equipment Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "leid.s_n",
+   "fieldname": "s_n",
+   "fieldtype": "Data",
+   "label": "Serial Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "calibration_information_section",
+   "fieldtype": "Section Break",
+   "label": "Calibration Information"
+  },
+  {
+   "fieldname": "calibration_frequency",
+   "fieldtype": "Select",
+   "label": "Calibration Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nYearly"
+  },
+  {
+   "fieldname": "cb_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calibration_frequency_no",
+   "fieldtype": "Float",
+   "label": "Calibration Frequency No"
+  },
+  {
+   "fieldname": "cb_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_calibration_date",
+   "fieldtype": "Date",
+   "label": "Next Calibration Date"
+  },
+  {
+   "fieldname": "inhouse_calibration_section",
+   "fieldtype": "Section Break",
+   "label": "In-House Calibration"
+  },
+  {
+   "fieldname": "calibration_template",
+   "fieldtype": "Data",
+   "label": "Calibration Template"
+  },
+  {
+   "fieldname": "calibration_results_section",
+   "fieldtype": "Section Break",
+   "label": "Calibration Results"
+  },
+  {
+   "fieldname": "certificate",
+   "fieldtype": "Attach",
+   "label": "Certificate"
+  },
+  {
+   "fieldname": "column_break_gklth",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calibration_status",
+   "fieldtype": "Select",
+   "label": "Calibration Status",
+   "options": "\nCalibrated\nDue for Calibration\nOut of Service"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Laboratory Equipment Calibration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Equipment Calibration",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-20 16:05:07.136065",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Equipment Calibration",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "equipment_name",
+ "translated_doctype": 1
+}

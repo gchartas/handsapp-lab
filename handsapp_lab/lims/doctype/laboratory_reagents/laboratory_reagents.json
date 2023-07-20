@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-20 09:19:16.856238",
+ "description": "Section - Basic Information\nField: Quantity in Stock (Read Only, fetched from linked Item)\nField: Unit (Read Only, fetched from linked Item)\nField: Date of Arrival (Date)\nField: Expiration Date (Date)\nSection - Additional Information",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "basic_information_section",
+  "item",
+  "column_break_mwp48",
+  "reagent_name",
+  "cas_number",
+  "reagent_specifications_section",
+  "purity",
+  "molecular_formula",
+  "molecular_weight",
+  "msds",
+  "column_break_eyrl0",
+  "hazard_information",
+  "storage_and_handling_section",
+  "storage_conditions",
+  "shelf_life",
+  "handling_instructions",
+  "stock_information_section",
+  "expiration_date",
+  "additional_information_section",
+  "notescomments",
+  "letter_head"
+ ],
+ "fields": [
+  {
+   "default": "ReID.YY./",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": " Reagent ID",
+   "options": "ReID.YY./",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "reagent_name",
+   "fieldtype": "Read Only",
+   "label": "Reagent Name"
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "column_break_mwp48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cas_number",
+   "fieldtype": "Data",
+   "label": "CAS Number"
+  },
+  {
+   "fieldname": "reagent_specifications_section",
+   "fieldtype": "Section Break",
+   "label": "Reagent Specifications"
+  },
+  {
+   "fieldname": "purity",
+   "fieldtype": "Percent",
+   "label": "Purity"
+  },
+  {
+   "fieldname": "molecular_formula",
+   "fieldtype": "Data",
+   "label": "Molecular Formula"
+  },
+  {
+   "fieldname": "molecular_weight",
+   "fieldtype": "Float",
+   "label": "Molecular Weight"
+  },
+  {
+   "fieldname": "msds",
+   "fieldtype": "Attach",
+   "label": "MSDS"
+  },
+  {
+   "fieldname": "column_break_eyrl0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hazard_information",
+   "fieldtype": "Data",
+   "label": "Hazard Information"
+  },
+  {
+   "fieldname": "storage_and_handling_section",
+   "fieldtype": "Section Break",
+   "label": "Storage and Handling"
+  },
+  {
+   "fieldname": "storage_conditions",
+   "fieldtype": "Data",
+   "label": "Storage Conditions"
+  },
+  {
+   "fieldname": "shelf_life",
+   "fieldtype": "Date",
+   "label": "Shelf Life"
+  },
+  {
+   "fieldname": "handling_instructions",
+   "fieldtype": "Text",
+   "label": "Handling Instructions"
+  },
+  {
+   "fieldname": "stock_information_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Information"
+  },
+  {
+   "fieldname": "expiration_date",
+   "fieldtype": "Date",
+   "label": "Expiration Date"
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notescomments",
+   "fieldtype": "Text",
+   "label": "Notes/Comments"
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head",
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-20 09:31:55.267233",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Reagents",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "reagent_name"
+}

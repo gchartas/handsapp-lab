@@ -63,7 +63,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Library Management",
+   "label": "Knowledge Base",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -71,14 +71,59 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Library Management",
+   "label": "Library",
    "link_to": "Library Management",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manual",
+   "link_to": "Laboratory Manual",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment and Reagents",
+   "link_to": "About Us Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment",
+   "link_to": "Laboratory Equipment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reagents",
+   "link_to": "Laboratory Reagents",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment Type",
+   "link_to": "Laboratory Equipment Type",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-07-19 20:06:46.452301",
+ "modified": "2023-07-20 09:27:21.250726",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",
