@@ -1,0 +1,26 @@
+[
+ {
+  "align": "Left",
+  "content": "<style>\n    table, th, td {\n        border: 1px solid black;\n    }\n</style>\n<br>\n<table>\n    <tbody>\n        <tr>\n            <td rowspan=\"3\" style=\"text-align: center;\">\n                {{doc.logo}}<br>\n                {{doc.company}}\n            </td>\n            <td style=\"width: 40%; text-align: center;\">\n                {{doc.type_of_doc}}\n            </td>\n            <td rowspan=\"3\" style=\"width: 30%; text-align: right;\">\n                \u039a\u03c9\u03b4.: <b>{{doc.code_doc}}</b><br>\n                \u0397\u03bc\u03b5\u03c1 \u0395\u03ba\u03b4.: <b>{{doc.publish_date}}</b><br>\n                \u0395\u03ba\u03b4: <b>{{doc.rev}}</b>\n            </td>\n        </tr>\n        <tr>\n            <td rowspan=\"2\" style=\"width: 40%; text-align: center;\">\n                <b>{{doc.doc_title}}</b>\n            </td>\n        </tr>\n    </tbody>\n</table>\n<br>\n",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "<style>\n    table {\n        width: 100%;\n    }\n</style>\n<table>\n    <tbody>\n        <tr>\n            <td style=\"width: 33%;\">\n                <b>\u03a3\u03c5\u03bd\u03c4\u03ac\u03c7\u03b8\u03b7\u03ba\u03b5</b>    \n            </td>\n            <td style=\"width: 34%;\">\n                <b>\u0395\u03bb\u03ad\u03b3\u03c7\u03b8\u03b7\u03ba\u03b5</b>\n            </td>        \n            <td style=\"width: 33%;\">\n                <b>\u0395\u03b3\u03ba\u03c1\u03af\u03b8\u03b7\u03ba\u03b5</b>    \n            </td>\n        </tr>\n        <tr>\n            <td>\n                EngLandGR LP<br>\n                \u0388\u03c1\u03b3\u03bf <br>\n                {{doc.author}}\n            </td>\n            <td>\n                {{doc.company}}<br>\n                \u03a3\u03c5\u03bd\u03c4\u03bf\u03bd\u03b9\u03c3\u03c4\u03ae\u03c2 \u03a3\u0394<br>\n                {{doc.reviewed_by}}\n            </td>\n            <td>\n                {{doc.company}}<br>\n                \u0394\u03b9\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03c4\u03ae\u03c2 \u03a3\u0394<br>\n                {{doc.approved_by}}</td>\n            \n        </tr>\n    </tbody>\n</table>",
+  "footer_align": "Left",
+  "footer_image": null,
+  "footer_image_height": 0.0,
+  "footer_image_width": 0.0,
+  "footer_source": "HTML",
+  "image": null,
+  "image_height": 0.0,
+  "image_width": 0.0,
+  "is_default": 0,
+  "letter_head_name": "ISO",
+  "modified": "2023-07-21 13:33:11.486774",
+  "name": "ISO",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "source": "HTML"
+ }
+]

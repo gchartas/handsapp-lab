@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-21 12:07:29.796989",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "cal_name",
+  "cb_1",
+  "calibration_frequency",
+  "calibration_frequency_no",
+  "calibration_template_parameters_section",
+  "parameters",
+  "calibration_method_section",
+  "environmental_conditions",
+  "items_used_for_calibration",
+  "reagents",
+  "calibration_procedure",
+  "calibration_standards",
+  "document_details_section",
+  "doc_title",
+  "type_of_doc",
+  "code_doc",
+  "rev",
+  "publish_date",
+  "column_break_qagsi",
+  "author",
+  "reviewed_by",
+  "approved_by",
+  "column_break_2hggi",
+  "company",
+  "logo",
+  "letter_head"
+ ],
+ "fields": [
+  {
+   "fieldname": "cal_name",
+   "fieldtype": "Data",
+   "label": "Calibration Template Name"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calibration_template_parameters_section",
+   "fieldtype": "Section Break",
+   "label": "Calibration Template Parameters"
+  },
+  {
+   "default": "Yearly",
+   "fieldname": "calibration_frequency",
+   "fieldtype": "Select",
+   "label": "Calibration Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nYearly"
+  },
+  {
+   "default": "1",
+   "fieldname": "calibration_frequency_no",
+   "fieldtype": "Float",
+   "label": "Calibration Frequency No"
+  },
+  {
+   "fieldname": "parameters",
+   "fieldtype": "Table",
+   "label": "Calibration Parameters",
+   "options": "Lab Equipment Calibration Template Parameters"
+  },
+  {
+   "fieldname": "calibration_method_section",
+   "fieldtype": "Section Break",
+   "label": "Calibration Method"
+  },
+  {
+   "description": "Detailed step-by-step instructions on how to perform the calibration.",
+   "fieldname": "calibration_procedure",
+   "fieldtype": "Text Editor",
+   "label": "Calibration Procedure"
+  },
+  {
+   "description": "The calibrated and traceable reference standards used during the calibration.",
+   "fieldname": "calibration_standards",
+   "fieldtype": "Table",
+   "label": "Calibration Standards",
+   "options": "Library Management Citation"
+  },
+  {
+   "description": "The calibrated and traceable reference reagents used during the calibration",
+   "fieldname": "reagents",
+   "fieldtype": "Table",
+   "label": "Reagents",
+   "options": "Reagent Items"
+  },
+  {
+   "default": "LECT.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Calibration Template ID",
+   "options": "LECT.YY.-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "description": "Any specific environmental conditions required for the calibration process.",
+   "fieldname": "environmental_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Environmental Conditions"
+  },
+  {
+   "description": "The calibrated and traceable reference instruments used during the calibration",
+   "fieldname": "items_used_for_calibration",
+   "fieldtype": "Table",
+   "label": "Items Used for Calibration",
+   "options": "Calibration Items"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "doc_title",
+   "fieldtype": "Data",
+   "label": "Document Title",
+   "print_hide": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "print_hide": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Data",
+   "label": "Reviewed By",
+   "print_hide": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_qagsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1.0",
+   "fieldname": "rev",
+   "fieldtype": "Data",
+   "label": "Revision",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "Publish Date",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_2hggi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_doc",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "code_doc",
+   "fieldtype": "Data",
+   "label": "Document Code",
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-21 13:49:03.732232",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Lab Equipment Calibration Template",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "cal_name",
+ "translated_doctype": 1
+}

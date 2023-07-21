@@ -89,7 +89,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Equipment and Reagents",
+   "label": "Equipment",
    "link_to": "About Us Settings",
    "link_type": "DocType",
    "onboard": 0,
@@ -107,8 +107,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Reagents",
-   "link_to": "Laboratory Reagents",
+   "label": "Equipment Calibration",
+   "link_to": "Laboratory Equipment Calibration",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -121,9 +121,45 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reagents",
+   "link_to": "About Us Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reagents",
+   "link_to": "Laboratory Reagents",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bill of Materials",
+   "link_to": "BOM",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-07-20 09:27:21.250726",
+ "modified": "2023-07-21 11:12:15.406249",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",

@@ -27,21 +27,38 @@
   "cb_6",
   "next_calibration_date",
   "inhouse_calibration_section",
-  "calibration_template",
+  "template",
+  "parameters",
   "calibration_results_section",
   "certificate",
   "column_break_gklth",
   "calibration_status",
+  "signatures_section",
+  "signee_details",
+  "document_details_section",
+  "doc_title",
+  "type_of_doc",
+  "code_doc",
+  "rev",
+  "publish_date",
+  "column_break_w0poe",
+  "author",
+  "reviewed_by",
+  "approved_by",
+  "column_break_hp8vt",
+  "company",
+  "logo",
+  "letter_head",
   "amended_from"
  ],
  "fields": [
   {
-   "default": "LEC.YY./",
+   "default": "LEC.YY.-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Calibration ID",
-   "options": "LEC.YY./",
+   "options": "LEC.YY.-",
    "print_hide": 1,
    "read_only": 1
   },
@@ -115,6 +132,7 @@
    "label": "Calibration Information"
   },
   {
+   "default": "Yearly",
    "fieldname": "calibration_frequency",
    "fieldtype": "Select",
    "label": "Calibration Frequency",
@@ -125,6 +143,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "1",
    "fieldname": "calibration_frequency_no",
    "fieldtype": "Float",
    "label": "Calibration Frequency No"
@@ -153,19 +172,16 @@
    "label": "In-House Calibration"
   },
   {
-   "fieldname": "calibration_template",
-   "fieldtype": "Data",
-   "label": "Calibration Template"
-  },
-  {
    "fieldname": "calibration_results_section",
    "fieldtype": "Section Break",
    "label": "Calibration Results"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "certificate",
    "fieldtype": "Attach",
-   "label": "Certificate"
+   "label": "Certificate",
+   "print_hide": 1
   },
   {
    "fieldname": "calibration_status",
@@ -176,12 +192,125 @@
   {
    "fieldname": "column_break_gklth",
    "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "default": "Laboratory Equipment Calibration",
+   "fieldname": "doc_title",
+   "fieldtype": "Data",
+   "label": "Document Title",
+   "print_hide": 1
+  },
+  {
+   "default": "Quality Form",
+   "fieldname": "type_of_doc",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "print_hide": 1
+  },
+  {
+   "default": "11731",
+   "fieldname": "code_doc",
+   "fieldtype": "Data",
+   "label": "Document Code",
+   "print_hide": 1
+  },
+  {
+   "default": "1.0",
+   "fieldname": "rev",
+   "fieldtype": "Data",
+   "label": "Revision",
+   "print_hide": 1
+  },
+  {
+   "default": "2023-10-23",
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "Publish Date",
+   "print_hide": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "print_hide": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Data",
+   "label": "Reviewed By",
+   "print_hide": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_hp8vt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "print_hide": 1
+  },
+  {
+   "default": "ISO",
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Calibration Template",
+   "options": "Lab Equipment Calibration Template"
+  },
+  {
+   "fieldname": "parameters",
+   "fieldtype": "Table",
+   "label": "Calibration Parameters",
+   "options": "Laboratory Equipment Calibration Parameters"
+  },
+  {
+   "fieldname": "column_break_w0poe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signatures_section",
+   "fieldtype": "Section Break",
+   "label": "Signatures"
+  },
+  {
+   "fieldname": "signee_details",
+   "fieldtype": "Table",
+   "options": "Signee Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-20 15:25:47.778056",
+ "modified": "2023-07-21 17:18:24.069742",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment Calibration",

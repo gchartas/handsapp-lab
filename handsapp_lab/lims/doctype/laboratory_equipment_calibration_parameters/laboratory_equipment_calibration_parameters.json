@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-21 12:17:09.874890",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "uom",
+  "value_1",
+  "value_2",
+  "value_3",
+  "expected_value",
+  "tolerance",
+  "status"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "parameter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "value_1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value 1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "value_2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value 2"
+  },
+  {
+   "columns": 1,
+   "fieldname": "value_3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value 3"
+  },
+  {
+   "columns": 1,
+   "fieldname": "expected_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Value",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "tolerance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Tolerance",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-21 16:10:47.729188",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Equipment Calibration Parameters",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

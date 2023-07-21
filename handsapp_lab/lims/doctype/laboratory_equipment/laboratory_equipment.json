@@ -290,8 +290,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-07-20 10:46:28.400881",
+ "links": [
+  {
+   "link_doctype": "Laboratory Equipment Calibration",
+   "link_fieldname": "leid"
+  }
+ ],
+ "modified": "2023-07-21 07:07:20.565696",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment",

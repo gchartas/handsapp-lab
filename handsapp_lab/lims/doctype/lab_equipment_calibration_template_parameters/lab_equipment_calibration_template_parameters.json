@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-21 12:38:07.774495",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "uom",
+  "expected_value",
+  "tolerance"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter"
+  },
+  {
+   "fetch_from": "UOM",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "expected_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Value"
+  },
+  {
+   "fieldname": "tolerance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Tolerance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-21 12:38:07.774495",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Lab Equipment Calibration Template Parameters",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
