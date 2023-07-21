@@ -52,6 +52,19 @@
   "lab_eqpt_man",
   "cb_11",
   "notescomments",
+  "document_details_section",
+  "doc_title",
+  "type_of_doc",
+  "code_doc",
+  "rev",
+  "publish_date",
+  "column_break_ft3hm",
+  "author",
+  "reviewed_by",
+  "approved_by",
+  "data_b3bvo",
+  "company",
+  "logo",
   "letter_head"
  ],
  "fields": [
@@ -61,12 +74,12 @@
    "label": "Basic Equipment Information"
   },
   {
-   "default": "EqID.YY./",
+   "default": "LEiD-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Equipment ID",
-   "options": "EqID.YY./",
+   "options": "LEiD-",
    "read_only": 1
   },
   {
@@ -157,7 +170,8 @@
   {
    "fieldname": "cal_attach",
    "fieldtype": "Attach",
-   "label": "Calibration Certificate"
+   "label": "Calibration Certificate",
+   "print_hide": 1
   },
   {
    "fieldname": "calibration_agency",
@@ -219,10 +233,12 @@
    "label": "Notes/Comments"
   },
   {
+   "default": "ISO",
    "fieldname": "letter_head",
    "fieldtype": "Link",
    "label": "Letter Head",
-   "options": "Letter Head"
+   "options": "Letter Head",
+   "print_hide": 1
   },
   {
    "fieldname": "lab_eqpt_man",
@@ -287,6 +303,95 @@
   {
    "fieldname": "cb_21",
    "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "default": "Laboratory Equipment",
+   "fieldname": "doc_title",
+   "fieldtype": "Data",
+   "label": "Document Title",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "Quality Form",
+   "fieldname": "type_of_doc",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "17025",
+   "fieldname": "code_doc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Code",
+   "print_hide": 1
+  },
+  {
+   "default": "1.0",
+   "fieldname": "rev",
+   "fieldtype": "Data",
+   "label": "Revision",
+   "print_hide": 1
+  },
+  {
+   "default": "2023-10-23",
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "Publish Date",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_ft3hm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Data",
+   "label": "Reviewed By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "data_b3bvo",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -294,9 +399,13 @@
   {
    "link_doctype": "Laboratory Equipment Calibration",
    "link_fieldname": "leid"
+  },
+  {
+   "link_doctype": "Laboratory Equipment Maintenance",
+   "link_fieldname": "leid"
   }
  ],
- "modified": "2023-07-21 07:07:20.565696",
+ "modified": "2023-07-21 19:23:21.659067",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment",
@@ -336,5 +445,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "equipment_name",
+ "track_changes": 1,
  "translated_doctype": 1
 }

@@ -116,6 +116,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Equipment Maintenance",
+   "link_to": "Laboratory Equipment Maintenance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Equipment Type",
    "link_to": "Laboratory Equipment Type",
    "link_type": "DocType",
@@ -159,7 +168,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-07-21 11:12:15.406249",
+ "modified": "2023-07-21 19:27:29.069636",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",

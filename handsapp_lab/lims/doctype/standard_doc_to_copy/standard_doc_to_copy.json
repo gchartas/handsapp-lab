@@ -36,6 +36,7 @@
    "print_hide": 1
   },
   {
+   "default": "Quality Form",
    "fieldname": "type_of_doc",
    "fieldtype": "Data",
    "label": "Document Type",
@@ -43,6 +44,7 @@
    "translatable": 1
   },
   {
+   "default": "17025",
    "fieldname": "code_doc",
    "fieldtype": "Data",
    "label": "Document Code",
@@ -56,6 +58,7 @@
    "print_hide": 1
   },
   {
+   "default": "2023-12-12",
    "fieldname": "publish_date",
    "fieldtype": "Date",
    "label": "Publish Date",
@@ -70,21 +73,24 @@
    "fieldname": "author",
    "fieldtype": "Data",
    "label": "Author",
-   "print_hide": 1
+   "print_hide": 1,
+   "translatable": 1
   },
   {
    "default": "-",
    "fieldname": "reviewed_by",
    "fieldtype": "Data",
    "label": "Reviewed By",
-   "print_hide": 1
+   "print_hide": 1,
+   "translatable": 1
   },
   {
    "default": "G. Chartas",
    "fieldname": "approved_by",
    "fieldtype": "Data",
    "label": "Approved By",
-   "print_hide": 1
+   "print_hide": 1,
+   "translatable": 1
   },
   {
    "fieldname": "column_break_2hggi",
@@ -113,7 +119,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-21 13:35:48.874521",
+ "modified": "2023-07-21 18:48:06.804920",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Standard Doc to copy",

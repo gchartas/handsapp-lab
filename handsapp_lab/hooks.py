@@ -110,6 +110,10 @@ doc_events = {
     "Laboratory Equipment Calibration": {
         "on_submit": "handsapp_lab.lims.doctype.laboratory_equipment_calibration.laboratory_equipment_calibration.update_linked_equipment"
     },
+    "Laboratory Equipment Maintenance": {
+        "on_submit": "handsapp_lab.lims.doctype.laboratory_equipment_maintenance.laboratory_equipment_maintenance.update_linked_equipment"
+    },
+
 }
 
 

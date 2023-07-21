@@ -187,7 +187,8 @@
    "fieldname": "calibration_status",
    "fieldtype": "Select",
    "label": "Calibration Status",
-   "options": "\nCalibrated\nDue for Calibration\nOut of Service"
+   "options": "\nCalibrated\nDue for Calibration\nOut of Service",
+   "translatable": 1
   },
   {
    "fieldname": "column_break_gklth",
@@ -310,7 +311,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-21 17:18:24.069742",
+ "modified": "2023-07-21 19:59:02.020264",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment Calibration",

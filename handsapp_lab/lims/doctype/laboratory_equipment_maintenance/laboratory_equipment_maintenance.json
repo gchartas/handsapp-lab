@@ -1,0 +1,333 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-21 18:50:14.980540",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "cb_1",
+  "column_break_0lsyi",
+  "mnt_date",
+  "maintenance_information_section",
+  "leid",
+  "maintenance_type",
+  "column_break_1oynd",
+  "laboratory_equipment_name",
+  "maintenance_frequency",
+  "column_break_aupeu",
+  "serial_number",
+  "maintenance_frequency_no",
+  "maintenance_details_section",
+  "brief_description",
+  "column_break_lwad9",
+  "problems_corrected",
+  "mnt_status",
+  "mnt_next",
+  "signatures_section",
+  "signee_details",
+  "document_details_section",
+  "doc_title",
+  "type_of_doc",
+  "code_doc",
+  "rev",
+  "publish_date",
+  "column_break_qagsi",
+  "author",
+  "reviewed_by",
+  "approved_by",
+  "column_break_2hggi",
+  "company",
+  "logo",
+  "letter_head",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "LEM.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Maintenance ID",
+   "options": "LEM.YY.-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "leid",
+   "fieldtype": "Link",
+   "label": "Laboratory Equipment",
+   "options": "Laboratory Equipment"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "default": "Laboratory Equipment Maintenance\n",
+   "fieldname": "doc_title",
+   "fieldtype": "Data",
+   "label": "Document Title",
+   "print_hide": 1
+  },
+  {
+   "default": "Quality Form",
+   "fieldname": "type_of_doc",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "17025",
+   "fieldname": "code_doc",
+   "fieldtype": "Data",
+   "label": "Document Code",
+   "print_hide": 1
+  },
+  {
+   "default": "1.0",
+   "fieldname": "rev",
+   "fieldtype": "Data",
+   "label": "Revision",
+   "print_hide": 1
+  },
+  {
+   "default": "2023-12-12",
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "Publish Date",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_qagsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Data",
+   "label": "Reviewed By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_2hggi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "print_hide": 1
+  },
+  {
+   "default": "ISO",
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Laboratory Equipment Maintenance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_information_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Information"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "\nRoutine\nPreventative\nCorrective"
+  },
+  {
+   "fieldname": "column_break_1oynd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "leid.equipment_name",
+   "fieldname": "laboratory_equipment_name",
+   "fieldtype": "Data",
+   "label": "Laboratory Equipment Name",
+   "read_only": 1
+  },
+  {
+   "default": "Yearly",
+   "fieldname": "maintenance_frequency",
+   "fieldtype": "Select",
+   "label": "Maintenance Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nYearly"
+  },
+  {
+   "fieldname": "column_break_aupeu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "leid.s_n",
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mnt_date",
+   "fieldtype": "Date",
+   "label": "Maintenance Date"
+  },
+  {
+   "default": "1",
+   "fieldname": "maintenance_frequency_no",
+   "fieldtype": "Float",
+   "label": "Maintenance Frequency No"
+  },
+  {
+   "fieldname": "maintenance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Details"
+  },
+  {
+   "fieldname": "brief_description",
+   "fieldtype": "Small Text",
+   "label": "Brief Description"
+  },
+  {
+   "fieldname": "column_break_lwad9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "problems_corrected",
+   "fieldtype": "Small Text",
+   "label": "Problems Corrected"
+  },
+  {
+   "fieldname": "mnt_status",
+   "fieldtype": "Select",
+   "label": "Maintenance Status",
+   "options": "\nMaintained\nDue for Maintenance\nOut of Service"
+  },
+  {
+   "fieldname": "mnt_next",
+   "fieldtype": "Date",
+   "label": "Due Date for Next Maintenance"
+  },
+  {
+   "fieldname": "signatures_section",
+   "fieldtype": "Section Break",
+   "label": "Signatures"
+  },
+  {
+   "fieldname": "signee_details",
+   "fieldtype": "Table",
+   "options": "Signee Details"
+  },
+  {
+   "fieldname": "column_break_0lsyi",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-21 19:24:16.614397",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Equipment Maintenance",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "laboratory_equipment_name",
+ "translated_doctype": 1
+}
