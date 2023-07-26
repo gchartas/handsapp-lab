@@ -98,20 +98,21 @@ var set_dates = function(frm){
             break;
         case 'Weekly':
             // Subtract 7 days from report_date for 'from_date'
-            let from_date = frappe.datetime.add_days(frm.doc.st_rep_date, -7);
-            frm.set_value('from_date', from_date);
+            let wfrDate = frappe.datetime.add_days(frm.doc.st_rep_date, -7);
+            frm.set_value('from_date', wfrDate );
             frm.set_value('to_date', frm.doc.st_rep_date);
             frm.set_df_property('from_date', 'read_only', 1);
             frm.set_df_property('to_date', 'read_only', 1);
             break;
         case 'Monthly':
             // Go to the First of the Month
-            let month_start_date = frappe.datetime.get_month_start(frm.doc.st_rep_date);
-            frm.set_value('from_date', month_start_date);
-            frm.set_value('to_date', frm.doc.st_rep_date);
+            let toDate = new Date(frm.doc.st_rep_date);
+            let frDate = new Date(toDate.getFullYear(), toDate.getMonth(), 1);
+            frm.set_value('to_date', toDate);
+            frm.set_value('from_date', frDate);
             frm.set_df_property('from_date', 'read_only', 1);
             frm.set_df_property('to_date', 'read_only', 1);
-            break;
+            break;        
         case 'Custom':
             frm.set_df_property('from_date', 'read_only', 0);
             frm.set_df_property('to_date', 'read_only', 0);
