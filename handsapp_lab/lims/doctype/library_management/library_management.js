@@ -46,7 +46,7 @@ var relevant_section = function(frm){
         case 'Legislation':
             frm.toggle_display('legislation_section', true);
             break;
-        case 'Paper':
+        case 'Research Paper':
             frm.toggle_display('paper_section', true);
             break;
         case 'Court Decision':
@@ -74,7 +74,7 @@ function generateIeeeCitation(doc) {
         case 'Legislation':
             citation = generateCitationLine([doc.official_gazette, moment(doc.posting_date).format("DD.MM.YYYY"), doc.law_number, "<i>"+doc.title+"</i>", doc.reference_number, doc.m_a ]);
             break;
-        case 'Paper':
+        case 'Research Paper':
             citation = generateCitationLine([doc.concatenated_authors, "<i>"+doc.title+"</i>", doc.c_jn, doc.volumeissue, doc.page_numbers, moment(doc.posting_date).format("MMM YYYY") ]);
             break;
         case 'Court Decision':

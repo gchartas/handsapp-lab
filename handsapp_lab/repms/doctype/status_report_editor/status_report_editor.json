@@ -1,0 +1,431 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-25 07:26:05.432320",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "cb_2",
+  "type",
+  "cb_3",
+  "st_rep_date",
+  "section_break_bfnfi",
+  "title",
+  "report_user",
+  "report_reviewer_user",
+  "cb_1",
+  "from_date",
+  "to_date",
+  "work_completed_section",
+  "completed_tasks",
+  "work_in_progress_section",
+  "in_progress_tasks",
+  "upcoming_work_section",
+  "upcoming_tasks",
+  "issues_risks_and_analysis_section",
+  "issues_and_risks",
+  "key_insights_and_analysis",
+  "report_details_section",
+  "report_author",
+  "author_sig",
+  "author_sig_attach",
+  "report_status",
+  "cb_4",
+  "report_reviewer",
+  "reviewer_sig",
+  "reviewer_sig_attach",
+  "approval_date",
+  "cb_5",
+  "document_details_section",
+  "doc_title",
+  "type_of_doc",
+  "code_doc",
+  "rev",
+  "publish_date",
+  "column_break_kpiez",
+  "author",
+  "reviewed_by",
+  "approved_by",
+  "column_break_2hggi",
+  "company",
+  "logo",
+  "letter_head",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "StRepID-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Report ID",
+   "options": "StRepID-.YYYY.-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Report Title"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "st_rep_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date of The Report"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nDaily\nWeekly\nMonthly\nCustom"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "work_completed_section",
+   "fieldtype": "Section Break",
+   "label": "Work Completed"
+  },
+  {
+   "fieldname": "completed_tasks",
+   "fieldtype": "Table",
+   "label": "Completed Tasks",
+   "options": "Status Report Task Details"
+  },
+  {
+   "fieldname": "work_in_progress_section",
+   "fieldtype": "Section Break",
+   "label": "Work In Progress"
+  },
+  {
+   "fieldname": "in_progress_tasks",
+   "fieldtype": "Table",
+   "label": "In Progress Tasks",
+   "options": "Status Report Task Details"
+  },
+  {
+   "fieldname": "upcoming_work_section",
+   "fieldtype": "Section Break",
+   "label": "Upcoming Work"
+  },
+  {
+   "fieldname": "upcoming_tasks",
+   "fieldtype": "Table",
+   "label": "Upcoming Tasks",
+   "options": "Status Report Task Details"
+  },
+  {
+   "fieldname": "issues_risks_and_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Issues, Risks and Analysis"
+  },
+  {
+   "fieldname": "issues_and_risks",
+   "fieldtype": "Text Editor",
+   "label": "Issues and Risks"
+  },
+  {
+   "fieldname": "key_insights_and_analysis",
+   "fieldtype": "Text Editor",
+   "label": "Key Insights and Analysis"
+  },
+  {
+   "fieldname": "report_details_section",
+   "fieldtype": "Section Break",
+   "label": "Report Details"
+  },
+  {
+   "fieldname": "report_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Report User",
+   "options": "User",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "report_user.full_name",
+   "fieldname": "report_author",
+   "fieldtype": "Data",
+   "label": "Report Author"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "report_status",
+   "fieldtype": "Select",
+   "label": "Report Status",
+   "options": "Draft\nReviewed\nPublished"
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_reviewer_user",
+   "fieldtype": "Link",
+   "label": "Report Reviewer User",
+   "options": "User",
+   "permlevel": 1
+  },
+  {
+   "fetch_from": "report_reviewer_user.full_name",
+   "fieldname": "report_reviewer",
+   "fieldtype": "Data",
+   "label": "Report Reviewer"
+  },
+  {
+   "fieldname": "cb_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "default": "Status Report",
+   "fieldname": "doc_title",
+   "fieldtype": "Data",
+   "label": "Document Title",
+   "print_hide": 1
+  },
+  {
+   "default": "Quality Form",
+   "fieldname": "type_of_doc",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "17025",
+   "fieldname": "code_doc",
+   "fieldtype": "Data",
+   "label": "Document Code",
+   "print_hide": 1
+  },
+  {
+   "default": "1.0",
+   "fieldname": "rev",
+   "fieldtype": "Data",
+   "label": "Revision",
+   "print_hide": 1
+  },
+  {
+   "default": "2023-12-12",
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "Publish Date",
+   "print_hide": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Data",
+   "label": "Reviewed By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_2hggi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "print_hide": 1
+  },
+  {
+   "default": "ISO",
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Status Report Editor",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "author_sig",
+   "fieldtype": "Signature",
+   "label": "Author Signature"
+  },
+  {
+   "fieldname": "author_sig_attach",
+   "fieldtype": "Attach Image",
+   "label": "Author Signature Image"
+  },
+  {
+   "fieldname": "reviewer_sig",
+   "fieldtype": "Signature",
+   "label": "Reviewer Signature"
+  },
+  {
+   "fieldname": "reviewer_sig_attach",
+   "fieldtype": "Attach Image",
+   "label": "Reviewer Signature Image"
+  },
+  {
+   "fieldname": "section_break_bfnfi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kpiez",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-25 08:55:19.587522",
+ "modified_by": "Administrator",
+ "module": "RepMS",
+ "name": "Status Report Editor",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Status Report User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Status Report Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Status Report User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Status Report Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "track_changes": 1,
+ "translated_doctype": 1
+}

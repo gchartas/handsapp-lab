@@ -44,6 +44,7 @@
   "current_location",
   "cb_9",
   "responsible_person",
+  "responsible_name",
   "cb_10",
   "eqpt_condition",
   "cb_20",
@@ -80,6 +81,7 @@
    "hidden": 1,
    "label": "Equipment ID",
    "options": "LEiD-",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -220,7 +222,8 @@
    "fieldname": "responsible_person",
    "fieldtype": "Link",
    "label": "Responsible Person",
-   "options": "User"
+   "options": "User",
+   "print_hide": 1
   },
   {
    "fieldname": "additional_information_section",
@@ -392,6 +395,14 @@
    "fieldtype": "Attach Image",
    "label": "Logo",
    "print_hide": 1
+  },
+  {
+   "fetch_from": "responsible_person.full_name",
+   "fieldname": "responsible_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Responsible Person Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -405,7 +416,7 @@
    "link_fieldname": "leid"
   }
  ],
- "modified": "2023-07-21 19:23:21.659067",
+ "modified": "2023-07-26 12:00:17.939241",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment",

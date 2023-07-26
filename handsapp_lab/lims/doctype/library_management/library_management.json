@@ -75,7 +75,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Document Type",
-   "options": "\nStandard\nBook\nReport\nLegislation\nPaper\nCourt Decision\nGovernment Body Decision"
+   "options": "\nStandard\nBook\nReport\nLegislation\nResearch Paper\nCourt Decision\nGovernment Body Decision"
   },
   {
    "fieldname": "doc_format",
@@ -333,7 +333,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-21 19:32:52.927340",
+ "modified": "2023-07-26 11:32:36.416720",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Library Management",
