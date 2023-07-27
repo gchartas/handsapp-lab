@@ -16,6 +16,18 @@ frappe.ui.form.on('Library Management', {
 	},
 	before_save:function(frm){
 	    generateIeeeCitation(frm.doc);
+        let pornodate = new Date(frm.doc.posting_date);
+        
+        // convert it to the 'yymmdd' format
+        let cokedate = pornodate.getFullYear().toString().substr(-2) + ("0" + (pornodate.getMonth() + 1)).slice(-2) + ("0" + pornodate.getDate()).slice(-2);
+        
+        // append the data field value to the 'yymmdd' value
+        let pornoname = cokedate + " "+ frm.doc.short_title;
+        
+        // set this value in the third data field
+        frm.set_value('naming_field', pornoname);
+        // refresh the form to show the changes
+        frm.refresh_field('naming_field');
 	}
 });
 
