@@ -39,7 +39,6 @@
   "reviewer_sig",
   "reviewer_sig_attach",
   "approval_date",
-  "cb_5",
   "document_details_section",
   "doc_title",
   "type_of_doc",
@@ -201,10 +200,6 @@
    "label": "Report Reviewer"
   },
   {
-   "fieldname": "cb_5",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "approval_date",
    "fieldtype": "Date",
    "label": "Approval Date"
@@ -341,7 +336,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-25 08:55:19.587522",
+ "modified": "2023-07-28 08:15:01.579875",
  "modified_by": "Administrator",
  "module": "RepMS",
  "name": "Status Report Editor",

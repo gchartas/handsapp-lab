@@ -1,0 +1,412 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-19 07:51:28.064290",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "doc_format",
+  "cb_1",
+  "short_title",
+  "doc_type",
+  "sb_1",
+  "title",
+  "source_url",
+  "cb_2",
+  "author",
+  "posting_date",
+  "naming_field",
+  "concatenated_authors",
+  "standard_section",
+  "standard_number",
+  "cb_10",
+  "standard_body",
+  "book_section",
+  "publisher",
+  "cb_3",
+  "edition",
+  "city_country",
+  "isbnissn",
+  "report_section",
+  "r_no",
+  "cb_4",
+  "inst_org",
+  "legislation_section",
+  "law_number",
+  "official_gazette",
+  "cb_5",
+  "m_a",
+  "reference_number",
+  "paper_section",
+  "c_jn",
+  "cb_20",
+  "volumeissue",
+  "page_numbers",
+  "court_decision_section",
+  "case_name",
+  "case_number",
+  "cb_6",
+  "court_name",
+  "judges",
+  "decision_date",
+  "government_body_decision_section",
+  "jurisdiction",
+  "cb_21",
+  "docket_number",
+  "citation_section",
+  "citation",
+  "attached_copy",
+  "location_of_hardcopy"
+ ],
+ "fields": [
+  {
+   "default": "LID.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Library ID",
+   "options": "LID.YY.-"
+  },
+  {
+   "fieldname": "doc_format",
+   "fieldtype": "Select",
+   "label": "Document Format",
+   "options": "\nElectronic\nHardcopy"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "short_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Short Title",
+   "search_index": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "doc_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "\nStandard\nBook\nReport\nLegislation\nResearch Paper\nCourt Decision\nGovernment Body Decision"
+  },
+  {
+   "fieldname": "sb_1",
+   "fieldtype": "Section Break",
+   "label": "All Document Types"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "reqd": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "source_url",
+   "fieldtype": "Small Text",
+   "label": "Source URL"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "author",
+   "fieldtype": "Table MultiSelect",
+   "label": "Authors",
+   "options": "Library Management Authors Details",
+   "search_index": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Publication Date"
+  },
+  {
+   "fieldname": "naming_field",
+   "fieldtype": "Data",
+   "label": "Naming Field",
+   "read_only": 1
+  },
+  {
+   "fieldname": "concatenated_authors",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Concatenated Authors",
+   "read_only": 1
+  },
+  {
+   "fieldname": "standard_section",
+   "fieldtype": "Section Break",
+   "label": "Standard"
+  },
+  {
+   "fieldname": "standard_number",
+   "fieldtype": "Data",
+   "label": "Standard Number",
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "cb_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standard_body",
+   "fieldtype": "Small Text",
+   "label": "Standard Body",
+   "set_only_once": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "book_section",
+   "fieldtype": "Section Break",
+   "label": "Book"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Small Text",
+   "label": "Publisher "
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "edition",
+   "fieldtype": "Data",
+   "label": "Edition",
+   "translatable": 1
+  },
+  {
+   "fieldname": "city_country",
+   "fieldtype": "Data",
+   "label": "City and Country"
+  },
+  {
+   "fieldname": "isbnissn",
+   "fieldtype": "Data",
+   "label": "ISBN/ISSN"
+  },
+  {
+   "fieldname": "report_section",
+   "fieldtype": "Section Break",
+   "label": "Report"
+  },
+  {
+   "fieldname": "r_no",
+   "fieldtype": "Small Text",
+   "label": "Report Number"
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inst_org",
+   "fieldtype": "Small Text",
+   "label": "Institution/Organization"
+  },
+  {
+   "fieldname": "legislation_section",
+   "fieldtype": "Section Break",
+   "label": "Legislation"
+  },
+  {
+   "fieldname": "law_number",
+   "fieldtype": "Data",
+   "label": "Law Number"
+  },
+  {
+   "fieldname": "official_gazette",
+   "fieldtype": "Small Text",
+   "label": "Official Gazette"
+  },
+  {
+   "fieldname": "cb_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m_a",
+   "fieldtype": "Small Text",
+   "label": "Ministry/Authority"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "paper_section",
+   "fieldtype": "Section Break",
+   "label": "Paper"
+  },
+  {
+   "fieldname": "c_jn",
+   "fieldtype": "Small Text",
+   "label": "Conference/Journal Name "
+  },
+  {
+   "fieldname": "cb_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "volumeissue",
+   "fieldtype": "Data",
+   "label": "Volume/Issue"
+  },
+  {
+   "fieldname": "page_numbers",
+   "fieldtype": "Data",
+   "label": "Page Numbers"
+  },
+  {
+   "fieldname": "court_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Court Decisions"
+  },
+  {
+   "fieldname": "case_name",
+   "fieldtype": "Small Text",
+   "label": "Case Name"
+  },
+  {
+   "fieldname": "case_number",
+   "fieldtype": "Small Text",
+   "label": "Case Number"
+  },
+  {
+   "fieldname": "cb_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "court_name",
+   "fieldtype": "Small Text",
+   "label": "Court Name"
+  },
+  {
+   "fieldname": "judges",
+   "fieldtype": "Small Text",
+   "label": "Judges Involved"
+  },
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision Date"
+  },
+  {
+   "fieldname": "government_body_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Government Body Decision"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Small Text",
+   "label": "Jurisdiction"
+  },
+  {
+   "fieldname": "cb_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "docket_number",
+   "fieldtype": "Data",
+   "label": "Docket Number"
+  },
+  {
+   "fieldname": "citation_section",
+   "fieldtype": "Section Break",
+   "label": "Citation"
+  },
+  {
+   "fieldname": "citation",
+   "fieldtype": "Text",
+   "label": "Citation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attached_copy",
+   "fieldtype": "Attach",
+   "label": "Attached Copy"
+  },
+  {
+   "fieldname": "location_of_hardcopy",
+   "fieldtype": "Small Text",
+   "label": "Location of Hardcopy"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-01 10:02:34.169422",
+ "modified_by": "Administrator",
+ "module": "Core HandSAppLab",
+ "name": "Library Management",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Knowledge Base Contributor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Knowledge Base Editor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "short_title, title, standard_number, law_number, official_gazette, case_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "short_title",
+ "track_changes": 1,
+ "translated_doctype": 1
+}

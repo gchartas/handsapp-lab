@@ -1,24 +1,24 @@
 {
- "cards_label": "Reporting Management System",
  "category": "Modules",
  "charts": [],
- "creation": "2023-07-26 11:49:29.283537",
+ "creation": "2023-08-01 10:33:12.474831",
  "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
  "doctype": "Workspace",
  "extends_another_page": 0,
  "hide_custom": 0,
- "icon": "small-file",
+ "icon": "support",
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "label": "Reporting Management",
+ "label": "Protocol and Communication",
  "links": [
   {
    "hidden": 0,
+   "icon": "mail",
    "is_query_report": 0,
-   "label": "Status Updates",
+   "label": "Protocol and Communication",
    "link_to": "About Us Settings",
    "link_type": "DocType",
    "onboard": 0,
@@ -27,8 +27,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Status Report",
-   "link_to": "Status Report Editor",
+   "label": "Protocol",
+   "link_to": "Protocol",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -36,8 +36,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Task",
-   "link_to": "Task",
+   "label": "Communication",
+   "link_to": "Communication",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -45,8 +45,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Projects",
-   "link_to": "Project",
+   "label": "Contact",
+   "link_to": "Contact",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -54,17 +54,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Technical Reporting",
-   "link_to": "About Us Settings",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Techical Report",
-   "link_to": "Techical Report",
+   "label": "Address",
+   "link_to": "Address",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -72,16 +63,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Report Author",
-   "link_to": "Report Author",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Knowledge Base",
+   "label": "Library",
    "link_to": "About Us Settings",
    "link_type": "DocType",
    "onboard": 0,
@@ -97,12 +79,31 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-01 15:30:57.030406",
+ "modified": "2023-08-01 15:29:11.698531",
  "modified_by": "Administrator",
- "module": "RepMS",
- "name": "Reporting Management",
+ "module": "Core HandSAppLab",
+ "name": "Protocol and Communication",
  "owner": "Administrator",
  "pin_to_bottom": 0,
  "pin_to_top": 1,
- "shortcuts": []
+ "shortcuts": [
+  {
+   "doc_view": "New",
+   "label": "New Protocol",
+   "link_to": "Protocol",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Communication",
+   "link_to": "Communication",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "New Contact",
+   "link_to": "Contact",
+   "type": "DocType"
+  }
+ ]
 }
