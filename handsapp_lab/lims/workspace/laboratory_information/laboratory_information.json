@@ -109,6 +109,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Laboratory Protocol/Method",
+   "link_to": "Laboratory Protocol",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Library",
    "link_to": "Library Management",
    "link_type": "DocType",
@@ -125,7 +134,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-01 15:30:27.097217",
+ "modified": "2023-08-03 20:00:11.782041",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",

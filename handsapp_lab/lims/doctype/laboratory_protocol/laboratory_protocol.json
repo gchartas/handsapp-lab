@@ -1,43 +1,389 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
- "creation": "2023-07-18 20:53:52.931329",
+ "autoname": "field:doc_title",
+ "creation": "2023-08-02 06:53:09.390573",
+ "description": "conform with ISO 17025",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series"
+  "doc_title",
+  "column_break_3z4fe",
+  "section_break_7fnwf",
+  "rev",
+  "column_break_hyfnc",
+  "publish_date",
+  "column_break_srojn",
+  "review_date",
+  "set_dates",
+  "intro_section",
+  "scope",
+  "terms_and_definitions",
+  "principle",
+  "considerations",
+  "apparatus_and_materials_section",
+  "equipment",
+  "reagents",
+  "analysis_section",
+  "input",
+  "procedure",
+  "output",
+  "information_section",
+  "precision_rr",
+  "qc",
+  "records_and_reporting",
+  "references",
+  "protocol_team",
+  "rev_history",
+  "document_details_section",
+  "type_of_doc",
+  "code_doc",
+  "column_break_qagsi",
+  "author",
+  "reviewed_by",
+  "approved_by",
+  "column_break_2hggi",
+  "company",
+  "logo",
+  "letter_head",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "naming_series",
+   "bold": 1,
+   "description": "The title of the method",
+   "fieldname": "doc_title",
    "fieldtype": "Data",
-   "label": "Protocol ID",
-   "options": "LabP.YY./"
+   "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Protocol/Method Title",
+   "print_hide": 1,
+   "translatable": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3z4fe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7fnwf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1.0",
+   "fieldname": "rev",
+   "fieldtype": "Data",
+   "label": "Revision"
+  },
+  {
+   "fieldname": "column_break_hyfnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2023-12-12",
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Publish Date"
+  },
+  {
+   "fieldname": "column_break_srojn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "intro_section",
+   "fieldtype": "Section Break",
+   "label": "Introduction"
+  },
+  {
+   "default": "<h2>Scope</h2>",
+   "description": "Describes the range of application of the method and its limitations",
+   "fieldname": "scope",
+   "fieldtype": "Text Editor",
+   "label": "Scope",
+   "translatable": 1
+  },
+  {
+   "default": "<h2>Terms and Definitions</h2>",
+   "description": "Any specific terms and definitions used in the method.",
+   "fieldname": "terms_and_definitions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Definitions",
+   "translatable": 1
+  },
+  {
+   "default": "<h2>Principle of Method</h2>",
+   "description": "A brief description of the scientific principles that the method is based on.",
+   "fieldname": "principle",
+   "fieldtype": "Text Editor",
+   "label": "Principle of Method",
+   "translatable": 1
+  },
+  {
+   "default": "<h2>Safety and Environmental Considerations</h2>",
+   "description": "Detailed safety instructions and necessary precautions to be taken during the test",
+   "fieldname": "considerations",
+   "fieldtype": "Text Editor",
+   "label": "Safety and Environmental Considerations",
+   "translatable": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "apparatus_and_materials_section",
+   "fieldtype": "Section Break",
+   "label": "Apparatus and Materials"
+  },
+  {
+   "description": "List of all the equipment needed.",
+   "fieldname": "equipment",
+   "fieldtype": "Table",
+   "label": "Equipment",
+   "options": "Laboratory Protocol Equipment"
+  },
+  {
+   "description": "List of all the materials needed.",
+   "fieldname": "reagents",
+   "fieldtype": "Table",
+   "label": "Reagents",
+   "options": "Laboratory Protocol Reagents"
+  },
+  {
+   "fieldname": "analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Analysis"
+  },
+  {
+   "description": "Description of the necessary sample size, condition, storage, and any pre-treatment",
+   "fieldname": "input",
+   "fieldtype": "Table",
+   "label": "Input",
+   "options": "Laboratory Protocol Input"
+  },
+  {
+   "description": "This should provide a detailed, step-by-step breakdown of the experimental procedure. Each step should be a new row in the table. Information can include: Step number, Description of the action to be taken, Any specific notes or precautions, Estimated time required for each step",
+   "fieldname": "procedure",
+   "fieldtype": "Table",
+   "label": "Process",
+   "options": "Laboratory Protocol Process"
+  },
+  {
+   "description": "This could include the expected results or products of the experiment, the means by which results are to be recorded and any important notes about interpreting these results. It might contain fields like: Expected output/result, Method of result recording, Notes on interpretation",
+   "fieldname": "output",
+   "fieldtype": "Table",
+   "label": "Output",
+   "options": "Laboratory Protocol Output"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "information_section",
+   "fieldtype": "Section Break",
+   "label": "Information"
+  },
+  {
+   "default": "<h2>Precision (Repeatability and Reproducibility)</h2>",
+   "description": "Information on the precision of the method when performed under repeatability and reproducibility conditions.",
+   "fieldname": "precision_rr",
+   "fieldtype": "Text Editor",
+   "label": "Precision (Repeatability and Reproducibility)",
+   "translatable": 1
+  },
+  {
+   "default": "<h2>Quality Control and Validation Data</h2>",
+   "description": "Description of quality control measures and validation data.",
+   "fieldname": "qc",
+   "fieldtype": "Text Editor",
+   "label": "Quality Control and Validation Data",
+   "translatable": 1
+  },
+  {
+   "default": "<h2>Records and Reporting</h2>",
+   "description": "Describe the type of records that must be maintained and any reports that must be written.",
+   "fieldname": "records_and_reporting",
+   "fieldtype": "Text Editor",
+   "label": "Records and Reporting",
+   "translatable": 1
+  },
+  {
+   "description": "List of reference standards or documents relevant to the protocol.",
+   "fieldname": "references",
+   "fieldtype": "Table",
+   "label": "Normative References",
+   "options": "Library Management Citation"
+  },
+  {
+   "fieldname": "rev_history",
+   "fieldtype": "Table",
+   "label": "Revision History",
+   "options": "Laboratory Protocol Revision History"
+  },
+  {
+   "description": "The name of the person or team that prepared, reviewed and approved the protocol including signatures and dates.",
+   "fieldname": "protocol_team",
+   "fieldtype": "Table",
+   "label": "Protocol Team",
+   "options": "Laboratory Protocol Team"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "default": "Laboratory Protocol",
+   "fieldname": "type_of_doc",
+   "fieldtype": "Data",
+   "label": "Document Type",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "code_doc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Laboratory Protocol ID",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_qagsi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Author",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "-",
+   "fieldname": "reviewed_by",
+   "fieldtype": "Data",
+   "label": "Reviewed By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "default": "G. Chartas",
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By",
+   "print_hide": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_2hggi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "print_hide": 1
+  },
+  {
+   "default": "ISO",
+   "fieldname": "letter_head",
+   "fieldtype": "Link",
+   "label": "Letter Head",
+   "options": "Letter Head",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Laboratory Protocol",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "set_dates",
+   "fieldtype": "Button",
+   "label": "Set Dates"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-08-01 10:39:56.566577",
+ "modified": "2023-08-03 19:15:08.019068",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Protocol",
+ "name_case": "Title Case",
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Laboratory Technician",
    "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
+ "search_fields": "doc_title",
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_views": 1,
+ "translated_doctype": 1
 }

@@ -48,10 +48,14 @@
    "options": "Item"
   },
   {
+   "allow_in_quick_entry": 1,
    "fetch_from": "item.item_name",
    "fieldname": "reagent_name",
-   "fieldtype": "Read Only",
-   "label": "Reagent Name"
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reagent Name",
+   "read_only": 1,
+   "translatable": 1
   },
   {
    "fieldname": "basic_information_section",
@@ -151,7 +155,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-01 10:39:40.553556",
+ "modified": "2023-08-03 13:53:17.032421",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Reagents",
