@@ -154,8 +154,16 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-08-03 13:53:17.032421",
+ "links": [
+  {
+   "is_child_table": 1,
+   "link_doctype": "Laboratory Protocol Reagents",
+   "link_fieldname": "reagent",
+   "parent_doctype": "Laboratory Protocol",
+   "table_fieldname": "reagents"
+  }
+ ],
+ "modified": "2023-08-04 06:27:14.966969",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Reagents",

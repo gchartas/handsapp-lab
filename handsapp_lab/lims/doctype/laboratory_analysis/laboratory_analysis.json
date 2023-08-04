@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-04 07:06:29.366793",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "laboratory_protocol",
+  "analysis_status",
+  "cb_1",
+  "analyst",
+  "analysis_start",
+  "analysis_end",
+  "analyst_name",
+  "sb_1",
+  "sample_id",
+  "cb_2",
+  "received_date",
+  "cb_3",
+  "sample_condition",
+  "section_break_0dezb",
+  "input",
+  "process",
+  "results",
+  "remarks",
+  "signatures_section",
+  "laboratory_team",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Analysis ID",
+   "options": "AnalID.YY..MM..DD.-.###"
+  },
+  {
+   "fieldname": "laboratory_protocol",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Laboratory Protocol",
+   "options": "Laboratory Protocol"
+  },
+  {
+   "fieldname": "sample_id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Sample ID"
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Received Date"
+  },
+  {
+   "fieldname": "analysis_start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Analysis Start"
+  },
+  {
+   "fieldname": "analysis_end",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Analysis End"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sample_condition",
+   "fieldtype": "Select",
+   "label": "Sample Condition",
+   "options": "\nExcellent\nGood\nFair\nPoor\nUnusable",
+   "translatable": 1
+  },
+  {
+   "fieldname": "analyst",
+   "fieldtype": "Link",
+   "label": "Analyst",
+   "options": "User"
+  },
+  {
+   "fetch_from": "analyst.full_name",
+   "fieldname": "analyst_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Analyst Name",
+   "read_only": 1,
+   "translatable": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sb_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_0dezb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "input",
+   "fieldtype": "Table",
+   "label": "Input",
+   "options": "Laboratory Analysis Input"
+  },
+  {
+   "fieldname": "process",
+   "fieldtype": "Table",
+   "label": "Process",
+   "options": "Laboratory Analysis Process"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Results",
+   "options": "Laboratory Analysis Output"
+  },
+  {
+   "fieldname": "signatures_section",
+   "fieldtype": "Section Break",
+   "label": "Signatures"
+  },
+  {
+   "fieldname": "laboratory_team",
+   "fieldtype": "Table",
+   "label": "Laboratory Team",
+   "options": "Laboratory Team"
+  },
+  {
+   "bold": 1,
+   "fieldname": "analysis_status",
+   "fieldtype": "Select",
+   "label": "Analysis Status",
+   "options": "Pending\nIn Progress\nCompleted\nFailed",
+   "translatable": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Laboratory Analysis",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-08-04 10:52:52.217284",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Analysis",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "laboratory_protocol",
+ "track_changes": 1,
+ "track_views": 1,
+ "translated_doctype": 1
+}

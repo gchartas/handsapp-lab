@@ -27,7 +27,6 @@
   "attachments",
   "sb_4",
   "internal_distribution",
-  "amended_from",
   "status_details_section",
   "doc_status",
   "follow_up_date",
@@ -36,7 +35,8 @@
   "direction",
   "cb_5",
   "priority",
-  "cprno"
+  "cprno",
+  "amended_from"
  ],
  "fields": [
   {
@@ -172,6 +172,7 @@
    "options": "Open\nClosed\nCompleted\nForwarded\nIn Progress\nFollow Up"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "follow_up_date",
    "fieldtype": "Date",
    "label": "Follow Up Date"
@@ -217,7 +218,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-01 10:21:27.531178",
+ "modified": "2023-08-04 10:17:44.573210",
  "modified_by": "Administrator",
  "module": "Core HandSAppLab",
  "name": "Protocol",

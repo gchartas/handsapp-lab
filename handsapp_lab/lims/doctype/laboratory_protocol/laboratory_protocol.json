@@ -99,7 +99,6 @@
    "label": "Next Review Date"
   },
   {
-   "collapsible": 1,
    "fieldname": "intro_section",
    "fieldtype": "Section Break",
    "label": "Introduction"
@@ -137,7 +136,6 @@
    "translatable": 1
   },
   {
-   "collapsible": 1,
    "fieldname": "apparatus_and_materials_section",
    "fieldtype": "Section Break",
    "label": "Apparatus and Materials"
@@ -183,7 +181,6 @@
    "options": "Laboratory Protocol Output"
   },
   {
-   "collapsible": 1,
    "fieldname": "information_section",
    "fieldtype": "Section Break",
    "label": "Information"
@@ -230,7 +227,7 @@
    "fieldname": "protocol_team",
    "fieldtype": "Table",
    "label": "Protocol Team",
-   "options": "Laboratory Protocol Team"
+   "options": "Laboratory Team"
   },
   {
    "collapsible": 1,
@@ -325,7 +322,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-03 19:15:08.019068",
+ "modified": "2023-08-04 07:37:14.474165",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Protocol",
