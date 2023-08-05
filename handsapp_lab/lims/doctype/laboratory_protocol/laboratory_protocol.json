@@ -15,6 +15,7 @@
   "rev",
   "column_break_hyfnc",
   "publish_date",
+  "total_time",
   "column_break_srojn",
   "review_date",
   "set_dates",
@@ -163,7 +164,7 @@
    "description": "Description of the necessary sample size, condition, storage, and any pre-treatment",
    "fieldname": "input",
    "fieldtype": "Table",
-   "label": "Input",
+   "label": "Process Steps",
    "options": "Laboratory Protocol Input"
   },
   {
@@ -177,7 +178,7 @@
    "description": "This could include the expected results or products of the experiment, the means by which results are to be recorded and any important notes about interpreting these results. It might contain fields like: Expected output/result, Method of result recording, Notes on interpretation",
    "fieldname": "output",
    "fieldtype": "Table",
-   "label": "Output",
+   "label": "Results",
    "options": "Laboratory Protocol Output"
   },
   {
@@ -317,12 +318,20 @@
    "fieldname": "set_dates",
    "fieldtype": "Button",
    "label": "Set Dates"
+  },
+  {
+   "fieldname": "total_time",
+   "fieldtype": "Float",
+   "label": "Total Time (in hours)",
+   "precision": "5",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-04 07:37:14.474165",
+ "modified": "2023-08-05 15:09:19.833315",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Protocol",

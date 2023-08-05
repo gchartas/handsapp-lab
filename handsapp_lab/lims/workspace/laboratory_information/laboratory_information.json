@@ -18,10 +18,26 @@
  "links": [
   {
    "hidden": 0,
+   "is_query_report": 0,
+   "label": "Analysis",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Analysis",
+   "link_to": "Laboratory Analysis",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "icon": "assets",
    "is_query_report": 0,
    "label": "Equipment",
-   "link_to": "About Us Settings",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -66,7 +82,6 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reagents",
-   "link_to": "About Us Settings",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -134,12 +149,12 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-03 20:00:11.782041",
+ "modified": "2023-08-05 19:29:08.860308",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",
  "owner": "Administrator",
  "pin_to_bottom": 0,
- "pin_to_top": 1,
+ "pin_to_top": 0,
  "shortcuts": []
 }
