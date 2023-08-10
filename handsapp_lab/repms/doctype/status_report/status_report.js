@@ -1,7 +1,7 @@
 // Copyright (c) 2023, George Chartas and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Status Report Editor', {
+frappe.ui.form.on('Status Report', {
     refresh: function(frm) {
         task_filtering(frm);
     },
@@ -64,8 +64,6 @@ var task_filtering = function(frm){
         return {
             filters: {
                 'status': 'Working',
-                //'assigned_to': doc.report_user,
-                //'completed_on': ['>=', doc.from_date, '<=', doc.to_date]
                 'name': ['not in', selected_tasks2]
             }
         };
@@ -80,8 +78,6 @@ var task_filtering = function(frm){
         return {
             filters: {
                 'status': 'Open',
-                //'assigned_to': doc.report_user,
-                //'completed_on': ['>=', doc.from_date, '<=', doc.to_date]
             }
         };
     };
@@ -119,3 +115,4 @@ var set_dates = function(frm){
             break;
     }
 };
+

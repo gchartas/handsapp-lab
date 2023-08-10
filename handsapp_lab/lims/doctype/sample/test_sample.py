@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestStatusReportEditor(unittest.TestCase):
+class TestSample(unittest.TestCase):
 	pass

@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-08-08 11:53:33.108607",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "template",
+  "cb_4",
+  "sample_type",
+  "sb_1",
+  "sampling_date",
+  "sampling_time",
+  "cb_1",
+  "sampling_details",
+  "sampling_parameters_section",
+  "parameter",
+  "cb_2",
+  "analyte",
+  "sb_2",
+  "geo"
+ ],
+ "fields": [
+  {
+   "default": "SID.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Sample ID",
+   "options": "SID.YY.-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Template",
+   "options": "Sample Template"
+  },
+  {
+   "default": "Today",
+   "fieldname": "sampling_date",
+   "fieldtype": "Date",
+   "label": "Sampling Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "sampling_time",
+   "fieldtype": "Time",
+   "label": "Sampling Time"
+  },
+  {
+   "fieldname": "sampling_details",
+   "fieldtype": "Small Text",
+   "label": "Sampling Details"
+  },
+  {
+   "fetch_from": "template.sample_type",
+   "fieldname": "sample_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sample Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sb_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "geo",
+   "fieldtype": "Geolocation"
+  },
+  {
+   "fieldname": "sampling_parameters_section",
+   "fieldtype": "Section Break",
+   "label": "Sampling Parameters"
+  },
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Table",
+   "label": "Parameter",
+   "options": "Sample Parameter"
+  },
+  {
+   "fieldname": "sb_2",
+   "fieldtype": "Section Break",
+   "label": "Sample Location"
+  },
+  {
+   "fieldname": "analyte",
+   "fieldtype": "Table",
+   "label": "Analysis Parameters",
+   "options": "Sample Analysis Parameter"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-08 22:21:17.505070",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Sample",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

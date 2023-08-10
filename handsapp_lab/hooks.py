@@ -16,7 +16,6 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/handsapp_lab/css/handsapp_lab.css"
 # app_include_js = "/assets/handsapp_lab/js/handsapp_lab.js"
-
 # app_include_js = "assets/js/handsapp_lab.min.js"
 
 # include js, css files in header of web template
@@ -35,6 +34,9 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "CPV": "public/js/cpv_tree.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

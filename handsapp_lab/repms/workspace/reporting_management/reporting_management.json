@@ -19,7 +19,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Status Updates",
-   "link_to": "About Us Settings",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -28,7 +28,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Status Report",
-   "link_to": "Status Report Editor",
+   "link_to": "Status Report",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -55,7 +55,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Technical Reporting",
-   "link_to": "About Us Settings",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -82,7 +82,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Knowledge Base",
-   "link_to": "About Us Settings",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -97,12 +97,12 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-01 15:30:57.030406",
+ "modified": "2023-08-07 19:37:43.816037",
  "modified_by": "Administrator",
  "module": "RepMS",
  "name": "Reporting Management",
  "owner": "Administrator",
  "pin_to_bottom": 0,
- "pin_to_top": 1,
+ "pin_to_top": 0,
  "shortcuts": []
 }

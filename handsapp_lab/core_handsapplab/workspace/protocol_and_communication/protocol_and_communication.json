@@ -19,7 +19,7 @@
    "icon": "mail",
    "is_query_report": 0,
    "label": "Protocol and Communication",
-   "link_to": "About Us Settings",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -64,7 +64,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Library",
-   "link_to": "About Us Settings",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -77,9 +77,63 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Projects, Tasks and ToDo",
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Task",
+   "link_to": "Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project",
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ToDo",
+   "link_to": "ToDo",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CPV",
+   "link_to": "",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CPV",
+   "link_to": "CPV",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-08-01 15:29:11.698531",
+ "modified": "2023-08-10 11:47:29.695104",
  "modified_by": "Administrator",
  "module": "Core HandSAppLab",
  "name": "Protocol and Communication",

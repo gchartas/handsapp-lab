@@ -20,6 +20,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Analysis",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -38,6 +39,7 @@
    "icon": "assets",
    "is_query_report": 0,
    "label": "Equipment",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -82,6 +84,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reagents",
+   "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -149,7 +152,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-08-05 19:29:08.860308",
+ "modified": "2023-08-07 19:38:39.914737",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",

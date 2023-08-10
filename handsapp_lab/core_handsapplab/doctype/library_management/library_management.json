@@ -68,8 +68,8 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "label": "Library ID",
-   "options": "LID.YY.-"
+   "options": "LID.YY.-",
+   "read_only": 1
   },
   {
    "fieldname": "doc_format",
@@ -83,16 +83,16 @@
   },
   {
    "allow_in_quick_entry": 1,
-   "bold": 1,
    "fieldname": "short_title",
    "fieldtype": "Data",
    "in_global_search": 1,
    "in_list_view": 1,
-   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Short Title",
-   "search_index": 1,
-   "translatable": 1
+   "length": 350,
+   "reqd": 1,
+   "translatable": 1,
+   "unique": 1
   },
   {
    "fieldname": "doc_type",
@@ -354,7 +354,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-04 14:55:33.943983",
+ "modified": "2023-08-05 20:39:01.094478",
  "modified_by": "Administrator",
  "module": "Core HandSAppLab",
  "name": "Library Management",
@@ -399,15 +399,18 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Knowledge Base Editor",
+   "set_user_permissions": 1,
    "share": 1,
    "write": 1
   }
  ],
  "search_fields": "short_title, title, standard_number, law_number, official_gazette, case_name",
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "short_title",

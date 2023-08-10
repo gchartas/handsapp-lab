@@ -67,12 +67,18 @@
    "read_only": 1
   },
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Report Title"
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "cb_1",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nDaily\nWeekly\nMonthly\nCustom"
+  },
+  {
+   "fieldname": "cb_3",
    "fieldtype": "Column Break"
   },
   {
@@ -83,24 +89,38 @@
    "label": "Date of The Report"
   },
   {
-   "fieldname": "type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Type",
-   "options": "\nDaily\nWeekly\nMonthly\nCustom"
+   "fieldname": "section_break_bfnfi",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "cb_2",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Report Title"
+  },
+  {
+   "fieldname": "report_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Report User",
+   "options": "User",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "report_reviewer_user",
+   "fieldtype": "Link",
+   "label": "Report Reviewer User",
+   "options": "User",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "cb_1",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
    "label": "From Date"
-  },
-  {
-   "fieldname": "cb_3",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "to_date",
@@ -161,19 +181,20 @@
    "label": "Report Details"
   },
   {
-   "fieldname": "report_user",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Report User",
-   "options": "User",
-   "print_hide": 1
-  },
-  {
    "fetch_from": "report_user.full_name",
    "fieldname": "report_author",
    "fieldtype": "Data",
    "label": "Report Author"
+  },
+  {
+   "fieldname": "author_sig",
+   "fieldtype": "Signature",
+   "label": "Author Signature"
+  },
+  {
+   "fieldname": "author_sig_attach",
+   "fieldtype": "Attach Image",
+   "label": "Author Signature Image"
   },
   {
    "allow_on_submit": 1,
@@ -187,17 +208,20 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "report_reviewer_user",
-   "fieldtype": "Link",
-   "label": "Report Reviewer User",
-   "options": "User",
-   "permlevel": 1
-  },
-  {
    "fetch_from": "report_reviewer_user.full_name",
    "fieldname": "report_reviewer",
    "fieldtype": "Data",
    "label": "Report Reviewer"
+  },
+  {
+   "fieldname": "reviewer_sig",
+   "fieldtype": "Signature",
+   "label": "Reviewer Signature"
+  },
+  {
+   "fieldname": "reviewer_sig_attach",
+   "fieldtype": "Attach Image",
+   "label": "Reviewer Signature Image"
   },
   {
    "fieldname": "approval_date",
@@ -245,6 +269,10 @@
    "fieldtype": "Date",
    "label": "Publish Date",
    "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_kpiez",
+   "fieldtype": "Column Break"
   },
   {
    "default": "G. Chartas",
@@ -300,46 +328,18 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Status Report Editor",
+   "options": "Status Report",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "author_sig",
-   "fieldtype": "Signature",
-   "label": "Author Signature"
-  },
-  {
-   "fieldname": "author_sig_attach",
-   "fieldtype": "Attach Image",
-   "label": "Author Signature Image"
-  },
-  {
-   "fieldname": "reviewer_sig",
-   "fieldtype": "Signature",
-   "label": "Reviewer Signature"
-  },
-  {
-   "fieldname": "reviewer_sig_attach",
-   "fieldtype": "Attach Image",
-   "label": "Reviewer Signature Image"
-  },
-  {
-   "fieldname": "section_break_bfnfi",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_kpiez",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-28 08:15:01.579875",
+ "modified": "2023-08-07 13:03:25.976922",
  "modified_by": "Administrator",
  "module": "RepMS",
- "name": "Status Report Editor",
+ "name": "Status Report",
  "name_case": "Title Case",
  "owner": "Administrator",
  "permissions": [
@@ -392,13 +392,11 @@
    "delete": 1,
    "email": 1,
    "export": 1,
-   "if_owner": 1,
    "permlevel": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Status Report User",
-   "select": 1,
    "share": 1,
    "write": 1
   },
@@ -413,7 +411,6 @@
    "report": 1,
    "role": "Status Report Manager",
    "select": 1,
-   "set_user_permissions": 1,
    "share": 1,
    "write": 1
   }

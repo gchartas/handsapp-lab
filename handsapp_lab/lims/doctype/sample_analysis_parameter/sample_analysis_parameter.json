@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-08 20:13:19.961116",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "laboratory_protocol",
+  "laboratory_analysis"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "laboratory_protocol",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Laboratory Protocol",
+   "options": "Laboratory Protocol",
+   "print_width": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "laboratory_analysis",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Laboratory Analysis",
+   "options": "Laboratory Analysis",
+   "print_width": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-08 22:36:01.148254",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Sample Analysis Parameter",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
