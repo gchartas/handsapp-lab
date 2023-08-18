@@ -48,7 +48,6 @@
    "bold": 1,
    "fieldname": "code",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Code",
    "length": 10,
    "unique": 1
@@ -84,9 +83,9 @@
   {
    "fieldname": "parent_cpv",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Parent CPV",
-   "options": "CPV",
-   "reqd": 1
+   "options": "CPV"
   },
   {
    "allow_in_quick_entry": 1,
@@ -102,6 +101,7 @@
    "bold": 1,
    "fieldname": "cpv_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nDeactivated\nDeprecated"
@@ -110,7 +110,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2023-08-10 08:34:09.166240",
+ "modified": "2023-08-18 07:16:36.424592",
  "modified_by": "Administrator",
  "module": "Core HandSAppLab",
  "name": "CPV",
@@ -143,7 +143,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "description_en",
+ "title_field": "description_el",
  "track_changes": 1,
  "translated_doctype": 1
 }

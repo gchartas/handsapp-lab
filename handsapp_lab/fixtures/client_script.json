@@ -1,0 +1,41 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Status Report",
+  "enabled": 1,
+  "modified": "2023-08-07 14:04:55.251857",
+  "name": "Status Report Editor-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Status Report', {\n    refresh: function(frm) {\n        frm.add_custom_button(__('Generate Report Name'), function() {\n            // Define the action of the button\n            if(frm.doc.type && frm.doc.st_rep_date){\n                frm.toggle_display('from_date',false);\n                frm.set_df_property('from_date', 'print_hide', 1);\n                frm.toggle_display('to_date',false);\n                frm.set_df_property('to_date', 'print_hide', 1);\n                switch(frm.doc.type){\n                    case 'Daily':\n                        let report_date = frappe.datetime.str_to_user(frm.doc.st_rep_date);\n                        let report_name = `\u0397\u03bc\u03b5\u03c1\u03ae\u03c3\u03b9\u03b1 \u0391\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd ${report_date}`;\n                        frm.set_value('title', report_name);\n                        \n                        break;\n                    case 'Weekly':\n                        let f_date = frappe.datetime.str_to_user(frm.doc.from_date);\n                        let t_date = frappe.datetime.str_to_user(frm.doc.to_date);\n                        let wreport_name = `\u0395\u03b2\u03b4\u03bf\u03bc\u03b1\u03b4\u03b9\u03b1\u03af\u03b1 \u0391\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf \u03b1\u03c0\u03cc ${f_date} \u03b5\u03c9\u03c2 ${t_date}`;\n                        frm.set_value('title', wreport_name);\n                        break;\n                    case 'Monthly':\n                        let mf_date = frappe.datetime.str_to_user(frm.doc.from_date);\n                        let mt_date = frappe.datetime.str_to_user(frm.doc.to_date);\n                        let mreport_name = `\u039c\u03b7\u03bd\u03b9\u03b1\u03af\u03b1 \u0391\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf \u03b1\u03c0\u03cc ${mf_date} \u03b5\u03c9\u03c2 ${mt_date}`;\n                        frm.set_value('title', mreport_name);\n                        break;\n                    case 'Custom':\n                        let cf_date = frappe.datetime.str_to_user(frm.doc.from_date);\n                        let ct_date = frappe.datetime.str_to_user(frm.doc.to_date);\n                        let creport_name = `\u0391\u03bd\u03b1\u03c6\u03bf\u03c1\u03ac \u03c4\u03b7\u03c2 \u03c0\u03b5\u03c1\u03b9\u03cc\u03b4\u03bf\u03c5 \u03b1\u03c0\u03cc ${cf_date} \u03b5\u03c9\u03c2 ${ct_date}`;\n                        frm.set_value('title', creport_name);\n                        break;\n                        \n                    \n                }\n            } else {\n                frm.toggle_display('from_date',true);\n                frm.set_df_property('from_date', 'print_hide', 0);\n                frm.toggle_display('to_date',true);\n                frm.set_df_property('to_date', 'print_hide', 0);\n            }\n        });\n    }\n});\n\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Item",
+  "enabled": 1,
+  "modified": "2023-08-12 21:03:49.474620",
+  "name": "Item-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Item', {\r\n    setup: function(frm) {\r\n        frm.fields_dict.cpv_division.get_query = function(doc) {\r\n            return {\r\n                filters: {\r\n                    \"type\": \"Division\",\r\n                    \"cpv_status\": \"Active\"\r\n                }\r\n            };\r\n        };\r\n        // For cpv_group\r\n        frm.fields_dict.cpv_group.get_query = function(doc) {\r\n            return {\r\n                filters: {\r\n                    \"type\": \"Group\",\r\n                    \"cpv_status\": \"Active\",\r\n                    \"parent_cpv\": doc.cpv_division  // filtering by the selected cpv_division\r\n                }\r\n            };\r\n        };\r\n        // For cpv_class\r\n        frm.fields_dict.cpv_class.get_query = function(doc) {\r\n            return {\r\n                filters: {\r\n                    \"type\": \"Class\",\r\n                    \"cpv_status\": \"Active\",\r\n                    \"parent_cpv\": doc.cpv_group\r\n                }\r\n            };\r\n        };\r\n        // For cpv_category\r\n        frm.fields_dict.cpv_category.get_query = function(doc) {\r\n            return {\r\n                filters: {\r\n                    \"type\": \"Category\",\r\n                    \"cpv_status\": \"Active\",\r\n                    \"parent_cpv\": doc.cpv_class\r\n                }\r\n            };\r\n        };\r\n        // For cpv_sub_category\r\n        frm.fields_dict.cpv_sub_category.get_query = function(doc) {\r\n            return {\r\n                filters: {\r\n                    \"type\": \"Sub Category\",\r\n                    \"cpv_status\": \"Active\",\r\n                    \"parent_cpv\": doc.cpv_category\r\n                }\r\n            };\r\n        };\r\n    },\r\n    validate: function(frm) {\r\n        // Set CPV based on hierarchy\r\n        if (!frm.doc.cpv) {\r\n            if (frm.doc.cpv_sub_category) {\r\n                frm.set_value('cpv', frm.doc.cpv_sub_category);\r\n            } else if (frm.doc.cpv_category) {\r\n                frm.set_value('cpv', frm.doc.cpv_category);\r\n            } else if (frm.doc.cpv_class) {\r\n                frm.set_value('cpv', frm.doc.cpv_class);\r\n            }\r\n        }\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Material Request",
+  "enabled": 1,
+  "modified": "2023-08-15 11:48:08.123353",
+  "name": "Material Request-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Material Request', {\r\n    onload: function(frm) {\r\n        frm.add_custom_button(__('Fetch Unique Values'), function() {\r\n            extract_and_populate_unique_values(frm);\r\n        });\r\n    },\r\n    refresh: function(frm) {\r\n        calculate_totals(frm);\r\n    },\r\n    items_add: function(frm, cdt, cdn) {\r\n        calculate_totals(frm);\r\n    },\r\n    items_remove: function(frm, cdt, cdn) {\r\n        calculate_totals(frm);\r\n    }\r\n});\r\n\r\nfrappe.ui.form.on('Material Request Item', {\r\n    qty: function(frm, cdt, cdn) {\r\n        calculate_totals(frm);\r\n    },\r\n    rate: function(frm, cdt, cdn) {\r\n        calculate_totals(frm);\r\n    }\r\n});\r\n\r\nfunction calculate_totals(frm) {\r\n    var subtotal = 0;\r\n    $.each(frm.doc.items || [], function(i, d) {\r\n        subtotal += flt(d.qty) * flt(d.rate);\r\n    });\r\n    \r\n    // Setting the subtotal value\r\n    frm.set_value(\"subtotal\", subtotal);\r\n    \r\n    // Calculating VAT and setting the value\r\n    var vatValue = flt(subtotal * 0.24);\r\n    frm.set_value(\"vat\", vatValue);\r\n    \r\n    // Calculating the total and setting the value\r\n    var totalValue = flt(subtotal + vatValue);\r\n    frm.set_value(\"total\", totalValue);\r\n    \r\n    // Refresh fields to reflect changes\r\n    frm.refresh_field(\"subtotal\");\r\n    frm.refresh_field(\"vat\");\r\n    frm.refresh_field(\"total\");\r\n}\r\n\r\nfunction extract_and_populate_unique_values(frm) {\r\n    var uniqueExpenseAccounts = [];\r\n    var uniqueCPVs = [];\r\n\r\n    $.each(frm.doc.items || [], function(i, d) {\r\n        if (d.expense_account && uniqueExpenseAccounts.indexOf(d.expense_account) === -1) {\r\n            uniqueExpenseAccounts.push(d.expense_account);\r\n        }\r\n        if (d.cpv && uniqueCPVs.indexOf(d.cpv) === -1) {\r\n            uniqueCPVs.push(d.cpv);\r\n        }\r\n    });\r\n\r\n    frm.set_value(\"expense_accounts\", uniqueExpenseAccounts.join(', '));\r\n    frm.set_value(\"cpv\", uniqueCPVs.join(', '));\r\n}",
+  "view": "Form"
+ }
+]
