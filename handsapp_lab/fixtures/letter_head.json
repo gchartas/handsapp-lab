@@ -22,5 +22,29 @@
   "parentfield": null,
   "parenttype": null,
   "source": "HTML"
+ },
+ {
+  "align": "Left",
+  "content": "<table style=\"width: 100%;\">\n    <tbody>\n        <tr>\n            <td>\n            <b>\u0394\u0397\u039c\u039f\u03a4\u0399\u039a\u0397 \u0395\u03a0\u0399\u03a7\u0395\u0399\u03a1\u0397\u03a3\u0397 \u03a5\u0394\u03a1\u0395\u03a5\u03a3\u0397\u03a3 <br>\n            \u0391\u03a0\u039f\u03a7\u0395\u03a4\u0395\u03a5\u03a3\u0397\u03a3 \u0396\u0391\u039a\u03a5\u039d\u0398\u039f\u03a5 (\u0394.\u0395.\u03a5.\u0391.\u0396.)</b><br>\n            \u03a4\u039c\u0397\u039c\u0391 \u03a0\u0395\u03a1\u0399\u0392\u0391\u039b\u039b\u039f\u039d\u03a4\u0399\u039a\u0397\u03a3 \u03a0\u0391\u03a1\u0391\u039a\u039f\u039b\u039f\u03a5\u0398\u0397\u03a3\u0397\u03a3<br>\n            \u0393\u03c1\u03b1\u03c6\u03b5\u03af\u03bf \u0395\u03c1\u03b3\u03b1\u03c3\u03c4\u03b7\u03c1\u03af\u03bf\u03c5 \u03ba\u03b1\u03b9 \u0395\u03bb\u03ad\u03b3\u03c7\u03bf\u03c5<br>\n            \u03a4\u03b1\u03c7.\u0394/\u03bd\u03c3\u03b7: \u0395\u0395\u039b, \u0394\u03c1\u03cc\u03bc\u03bf\u03c2 \u0391\u03b5\u03c1\u03bf\u03b4\u03c1\u03bf\u03bc\u03af\u03bf\u03c5, \u03a4\u039a 29100, \u0396\u03ac\u03ba\u03c5\u03bd\u03b8\u03bf\u03c2<br>\n            \u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2: \u0393. \u03a7\u03b1\u03c1\u03c4\u03ac\u03c2-\u03a3\u03c9\u03bb\u03b7\u03bd\u03b1\u03c1\u03b1\u03af\u03bf\u03c2<br>\n            e-mail: laboratory@deyazak.gr\n            </td>\n            <td align=\"right\"><br>\n            {% if doc.posting_date %} \u0396\u03ac\u03ba\u03c5\u03bd\u03b8\u03bf\u03c2, {{ frappe.utils.formatdate(doc.posting_date, \"dd/mm/yyyy\") }}<br>{% endif %}\n            {% if doc.gpn %}\u0391\u03c1\u03b9\u03b8\u03bc. \u03a0\u03c1\u03c9\u03c4.: {{doc.gpn}}{% endif %}<br>\n            </td>\n        </tr>\n</tbody></table>",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "",
+  "footer_align": "Left",
+  "footer_image": null,
+  "footer_image_height": 0.0,
+  "footer_image_width": 0.0,
+  "footer_source": "HTML",
+  "image": null,
+  "image_height": 0.0,
+  "image_width": 0.0,
+  "is_default": 1,
+  "letter_head_name": "George Chartas",
+  "modified": "2023-09-04 17:27:33.448444",
+  "name": "George Chartas",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "source": "HTML"
  }
 ]

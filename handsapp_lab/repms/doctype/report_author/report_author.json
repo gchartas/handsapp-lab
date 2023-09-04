@@ -2,15 +2,14 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "field:full_name",
  "creation": "2023-08-01 08:44:28.293803",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "user",
-  "full_name",
-  "naming_series"
+  "full_name"
  ],
  "fields": [
   {
@@ -32,16 +31,11 @@
    "fieldtype": "Link",
    "label": "User",
    "options": "User"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Report Author ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-07 14:44:11.139416",
+ "modified": "2023-08-30 13:46:39.597050",
  "modified_by": "Administrator",
  "module": "RepMS",
  "name": "Report Author",
