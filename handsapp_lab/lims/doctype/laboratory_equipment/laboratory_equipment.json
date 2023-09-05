@@ -422,9 +422,13 @@
   {
    "link_doctype": "Laboratory Equipment Maintenance",
    "link_fieldname": "leid"
+  },
+  {
+   "link_doctype": "Laboratory Manual",
+   "link_fieldname": "lab_eq"
   }
  ],
- "modified": "2023-08-03 13:53:52.892255",
+ "modified": "2023-09-05 16:39:11.131328",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment",

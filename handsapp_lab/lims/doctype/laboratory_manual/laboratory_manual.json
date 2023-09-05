@@ -19,6 +19,7 @@
   "rev",
   "cb_3",
   "author",
+  "lab_eq",
   "attachment_section",
   "attachment"
  ],
@@ -33,9 +34,11 @@
    "read_only": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "title",
    "fieldtype": "Small Text",
-   "label": "Title"
+   "label": "Title",
+   "translatable": 1
   },
   {
    "fieldname": "cb_1",
@@ -65,6 +68,7 @@
    "label": "Information"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "in_standard_filter": 1,
@@ -76,6 +80,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "rev",
    "fieldtype": "Data",
    "label": "Version"
@@ -95,14 +100,23 @@
    "label": "Attachment"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "attachment",
    "fieldtype": "Attach",
    "label": "Attachment"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "lab_eq",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Laboratory Equipment",
+   "options": "Laboratory Equipment"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-20 07:40:24.375455",
+ "modified": "2023-09-05 16:46:14.794945",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Manual",
@@ -155,6 +169,7 @@
    "share": 1
   }
  ],
+ "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "title",

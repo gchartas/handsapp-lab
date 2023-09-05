@@ -2,7 +2,13 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Laboratory Equipment', {
-	// refresh: function(frm) {
-
-	// }
+    refresh: function(frm) {
+        frm.fields_dict.lab_eqpt_man.grid.get_field('manual').get_query = function(doc, cdt, cdn) {
+            return {
+                filters: {
+                    'lab_eq': doc.name
+                }
+            };
+        };
+    }
 });
