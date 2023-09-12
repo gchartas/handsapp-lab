@@ -2,7 +2,37 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Laboratory Analysis', {
-	laboratory_protocol: function(frm) {
+	refresh: function(frm){
+        frm.add_custom_button('Fetch Data', function() {
+            clear_and_fetch(frm);
+        }, __('Actions'));
+        frm.add_custom_button('View Protocol', function() {
+            view_protocol(frm);
+        }, __('Actions'));
+
+        // Add a custom class to style the label
+        $(frm.fields_dict['laboratory_protocol'].label_area).addClass('custom-lab-protocol-label');
+
+        // Add CSS to style the custom class (you can also add this to your CSS file)
+        const custom_css = `
+            <style>
+                .custom-lab-protocol-label {
+                    font-weight: bold;
+                    color: blue;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            </style>
+        `;
+
+        $('head').append(custom_css);
+
+        // Attach a click event to the label
+        $(frm.fields_dict['laboratory_protocol'].label_area).click(function() {
+            view_protocol(frm);
+        });
+    },
+    laboratory_protocol: function(frm) {
         clear_and_fetch(frm);
     },
     analysis_start: function(frm){
@@ -86,6 +116,7 @@ var clear_and_fetch = function(frm){
                     // copy outputs from Laboratory Protocol to Laboratory Analysis
                     r.message.output.forEach(function(row) {
                         let child_row = frappe.model.add_child(frm.doc, "Results", "results");
+                        child_row.smpl_anal_parameter = row.smpl_anal_parameter;
                         child_row.title = row.title;
                         child_row.method = row.method;
                         child_row.uom = row.uom;
@@ -99,3 +130,70 @@ var clear_and_fetch = function(frm){
     // if Laboratory Protocol is cleared, the child tables will be empty
 
 };
+
+function view_protocol(frm) {
+    // Ensure that a Laboratory Protocol is selected
+    if (frm.doc.laboratory_protocol) {
+        // Fetch Laboratory Protocol data
+        frappe.call({
+            method: "frappe.client.get",
+            args: {
+                doctype: "Laboratory Protocol",
+                name: frm.doc.laboratory_protocol
+            },
+            callback: function (r) {
+                if (r.message) {
+                    // Extract the process steps
+                    const process_steps = r.message.input; // Replace 'process' with the actual field name in your Laboratory Protocol DocType
+
+                    // Create the dialog
+                    const d = new frappe.ui.Dialog({
+                        title: 'Protocol Steps',
+                        fields: [
+                            {
+                                label: 'Steps',
+                                fieldtype: 'HTML',
+                                fieldname: 'steps_table'
+                            }
+                        ],
+                        // Add this line to make the dialog larger
+                        size: 'large'
+                    });
+
+                    // Generate table HTML for steps
+                    let table_html = "<table class='table table-bordered'>";
+                    table_html += "<tr><th>Description</th><th>Duration</th><th>Notes</th></tr>";
+                    process_steps.forEach(step => {
+                        table_html += "<tr>";
+                        table_html += `<td>${step.description ? step.description : ''}</td>`;
+                        
+                        // Conditionally show duration if it exists
+                        if (step.duration) {
+                            table_html += `<td>${step.duration}</td>`;
+                        } else {
+                            table_html += "<td></td>";
+                        }
+                    
+                        // Conditionally show notes if they exist
+                        if (step.notes) {
+                            table_html += `<td>${step.notes}</td>`;
+                        } else {
+                            table_html += "<td></td>";
+                        }
+                    
+                        table_html += "</tr>";
+                    });
+                    table_html += "</table>";
+
+                    // Populate the dialog with the table
+                    d.fields_dict.steps_table.$wrapper.html(table_html);
+
+                    // Show the dialog
+                    d.show();
+                }
+            }
+        });
+    } else {
+        frappe.msgprint("Please select a Laboratory Protocol first.");
+    }
+}

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2023-07-20 08:00:16.776262",
@@ -428,7 +429,7 @@
    "link_fieldname": "lab_eq"
   }
  ],
- "modified": "2023-09-05 16:39:11.131328",
+ "modified": "2023-09-05 18:03:27.052242",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Equipment",

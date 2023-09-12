@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-07 07:39:35.171029",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "smpl_anal_parameter",
+  "parameter",
+  "uom",
+  "min_value",
+  "max_value",
+  "accredited"
+ ],
+ "fields": [
+  {
+   "fieldname": "smpl_anal_parameter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sampling Analysis Parameter",
+   "options": "Sampling Analysis Parameter",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "smpl_anal_parameter.parameter_name",
+   "fieldname": "parameter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "smpl_anal_parameter.uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UoM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "min_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min Value",
+   "print_hide_if_no_value": 1
+  },
+  {
+   "fieldname": "max_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Max Value",
+   "print_hide_if_no_value": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "smpl_anal_parameter.accredited",
+   "fieldname": "accredited",
+   "fieldtype": "Check",
+   "label": "Accredited"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-11 00:59:22.554337",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Sample Template Results",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "translated_doctype": 1
+}

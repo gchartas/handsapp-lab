@@ -18,6 +18,10 @@ app_license = "MIT"
 # app_include_js = "/assets/handsapp_lab/js/handsapp_lab.js"
 # app_include_js = "assets/js/handsapp_lab.min.js"
 
+app_include_js = [
+    "/assets/handsapp_lab/js/map_defaults.js"
+]
+
 # include js, css files in header of web template
 # web_include_css = "/assets/handsapp_lab/css/handsapp_lab.css"
 # web_include_js = "/assets/handsapp_lab/js/handsapp_lab.js"
@@ -34,9 +38,9 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-#doctype_js = {
+# doctype_js = {
 #    "CPV": "public/js/cpv_tree.js"
-#}
+# }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -115,6 +119,9 @@ doc_events = {
     "Laboratory Equipment Maintenance": {
         "on_submit": "handsapp_lab.lims.doctype.laboratory_equipment_maintenance.laboratory_equipment_maintenance.update_linked_equipment"
     },
+    "Laboratory Analysis": {
+        "on_submit": "handsapp_lab.lims.doctype.laboratory_analysis.laboratory_analysis.on_submit"
+    }
 
 }
 

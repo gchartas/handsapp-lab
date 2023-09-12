@@ -19,11 +19,20 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Analysis",
+   "label": "Sampling and Analysis",
    "link_to": "",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Sample",
+   "link_to": "Laboratory Sample",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -150,9 +159,53 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sampling Setup",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Sample Template",
+   "link_to": "Laboratory Sample Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sampling Analysis Parameter",
+   "link_to": "Sampling Analysis Parameter",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Sampling Method",
+   "link_to": "Laboratory Sampling Method",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Sample Location",
+   "link_to": "Laboratory Sample Location",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-08-07 19:38:39.914737",
+ "modified": "2023-09-11 00:44:17.619052",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",

@@ -1,0 +1,213 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:location_id",
+ "creation": "2023-09-08 05:32:58.500086",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location_id",
+  "location_name",
+  "is_active",
+  "column_break_yaop8",
+  "location_type",
+  "type",
+  "section_break_peu8j",
+  "create_map",
+  "location_section",
+  "address",
+  "address_text",
+  "polyline",
+  "column_break_cngcd",
+  "current_location",
+  "marker",
+  "polygon",
+  "section_break_4r1iu",
+  "get_coords",
+  "map"
+ ],
+ "fields": [
+  {
+   "description": "A unique identifier for each sampling location",
+   "fieldname": "location_id",
+   "fieldtype": "Data",
+   "label": "Location ID",
+   "unique": 1
+  },
+  {
+   "description": "The name of the location",
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "label": "Location Name"
+  },
+  {
+   "default": "0",
+   "description": "A Check field to indicate whether the location is currently active or not",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "column_break_yaop8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Whether it's a water source, wastewater outlet, etc.",
+   "fieldname": "location_type",
+   "fieldtype": "Select",
+   "label": "Location Type",
+   "options": "\nSource\nTank\nDistribution Network\nOutlet"
+  },
+  {
+   "description": "Whether it's a water source, wastewater outlet, etc",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nWater\nWastewater"
+  },
+  {
+   "fieldname": "section_break_peu8j",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "create_map",
+   "fieldtype": "Button",
+   "label": "Create Map"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "address_text",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "translatable": 1
+  },
+  {
+   "fieldname": "polyline",
+   "fieldtype": "Small Text",
+   "label": "Polyline"
+  },
+  {
+   "fieldname": "column_break_cngcd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Data",
+   "label": "Current Location"
+  },
+  {
+   "fieldname": "marker",
+   "fieldtype": "Small Text",
+   "label": "Marker"
+  },
+  {
+   "fieldname": "polygon",
+   "fieldtype": "Small Text",
+   "label": "Polygon"
+  },
+  {
+   "fieldname": "section_break_4r1iu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_coords",
+   "fieldtype": "Button",
+   "label": "Get Coordinates"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "Geolocation",
+   "label": "Map"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-11 00:59:45.976329",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Sample Location",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sampling Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sampling User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "location_name",
+ "translated_doctype": 1
+}

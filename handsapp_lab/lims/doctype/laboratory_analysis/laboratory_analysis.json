@@ -9,13 +9,13 @@
  "field_order": [
   "naming_series",
   "laboratory_protocol",
+  "analysis_start",
   "analysis_status",
   "cb_1",
   "analyst",
-  "analysis_start",
-  "analysis_end",
-  "duration",
   "analyst_name",
+  "duration",
+  "analysis_end",
   "sb_1",
   "sample_id",
   "cb_2",
@@ -35,7 +35,8 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Analysis ID",
-   "options": "AnalID.YY..MM..DD.-.###"
+   "options": "AnalID.YY..MM..DD.-.###",
+   "print_hide": 1
   },
   {
    "fieldname": "laboratory_protocol",
@@ -46,9 +47,10 @@
   },
   {
    "fieldname": "sample_id",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_standard_filter": 1,
-   "label": "Sample ID"
+   "label": "Sample ID",
+   "options": "Laboratory Sample"
   },
   {
    "fieldname": "received_date",
@@ -79,7 +81,8 @@
    "fieldname": "analyst",
    "fieldtype": "Link",
    "label": "Analyst",
-   "options": "User"
+   "options": "User",
+   "print_hide": 1
   },
   {
    "fetch_from": "analyst.full_name",
@@ -139,6 +142,7 @@
    "fieldtype": "Select",
    "label": "Analysis Status",
    "options": "Pending\nIn Progress\nCompleted\nFailed",
+   "print_hide": 1,
    "translatable": 1
   },
   {
@@ -166,7 +170,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-05 17:34:35.362388",
+ "modified": "2023-09-11 16:55:32.651060",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Analysis",

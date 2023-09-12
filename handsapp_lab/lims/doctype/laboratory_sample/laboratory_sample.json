@@ -1,0 +1,331 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-09-06 19:08:24.808870",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sample_identification_section",
+  "naming_series",
+  "description",
+  "template",
+  "sample_type",
+  "batch_number",
+  "laboratory_sample_location",
+  "address",
+  "current_location",
+  "sample_point_column",
+  "set_session",
+  "map",
+  "sampling_status",
+  "sampling_procedure_section",
+  "laboratory_sampling_method",
+  "sampler",
+  "sampler_name",
+  "laboratory_equipment",
+  "column_break_bdnut",
+  "date",
+  "time",
+  "pre_treatment",
+  "environmental_conditions_section",
+  "field_measurements",
+  "sample_storage_and_transportation_section",
+  "container_type",
+  "preservation_method",
+  "storage_temperature",
+  "transport_conditions",
+  "laboratory_analysis_section",
+  "laboratory",
+  "received_by",
+  "date_of_receipt",
+  "sample_required_tests",
+  "results_section",
+  "results"
+ ],
+ "fields": [
+  {
+   "default": "SmplID-.YY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "options": "SmplID-.YY.-",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "field_measurements",
+   "fieldtype": "Table",
+   "label": "Field Measurements",
+   "options": "Sample Field Measurements"
+  },
+  {
+   "fieldname": "sample_identification_section",
+   "fieldtype": "Section Break",
+   "label": "Sample Identification"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Laboratory Sample Template",
+   "options": "Laboratory Sample Template",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "template.sample_type",
+   "fieldname": "sample_type",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Sample Type",
+   "translatable": 1
+  },
+  {
+   "description": " If the sample is part of a larger set or batch.",
+   "fieldname": "batch_number",
+   "fieldtype": "Data",
+   "label": "Batch Number"
+  },
+  {
+   "fieldname": "laboratory_sample_location",
+   "fieldtype": "Link",
+   "label": "Laboratory Sample Location",
+   "options": "Laboratory Sample Location"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Data",
+   "label": "Current Location"
+  },
+  {
+   "fieldname": "sample_point_column",
+   "fieldtype": "Column Break",
+   "label": "Sample Point"
+  },
+  {
+   "fieldname": "set_session",
+   "fieldtype": "Button",
+   "label": "Set Session"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "Geolocation",
+   "label": "Map",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "sampling_status",
+   "fieldtype": "Select",
+   "label": "Sampling Status",
+   "options": "Sampling\nUnder Transport\nUnder Analysis\nAnalyzed"
+  },
+  {
+   "fieldname": "sampling_procedure_section",
+   "fieldtype": "Section Break",
+   "label": "Sampling Procedure"
+  },
+  {
+   "fieldname": "laboratory_sampling_method",
+   "fieldtype": "Link",
+   "label": "Laboratory Sampling Method",
+   "options": "Laboratory Sampling Method"
+  },
+  {
+   "fieldname": "sampler",
+   "fieldtype": "Link",
+   "label": "Sampler",
+   "options": "User",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "sampler.full_name",
+   "fieldname": "sampler_name",
+   "fieldtype": "Data",
+   "label": "Sampler Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "laboratory_equipment",
+   "fieldtype": "Small Text",
+   "label": "Laboratory Equipment"
+  },
+  {
+   "fieldname": "column_break_bdnut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "pre_treatment",
+   "fieldtype": "Small Text",
+   "label": "Pre treatment"
+  },
+  {
+   "fieldname": "environmental_conditions_section",
+   "fieldtype": "Section Break",
+   "label": "Environmental Conditions"
+  },
+  {
+   "fieldname": "sample_storage_and_transportation_section",
+   "fieldtype": "Section Break",
+   "label": "Sample Storage and Transportation"
+  },
+  {
+   "fieldname": "container_type",
+   "fieldtype": "Data",
+   "label": "Container Type"
+  },
+  {
+   "fieldname": "preservation_method",
+   "fieldtype": "Data",
+   "label": "Preservation Method"
+  },
+  {
+   "fieldname": "storage_temperature",
+   "fieldtype": "Data",
+   "label": "Storage Temperature"
+  },
+  {
+   "fieldname": "transport_conditions",
+   "fieldtype": "Data",
+   "label": "Transport Conditions"
+  },
+  {
+   "fieldname": "laboratory_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Laboratory Analysis"
+  },
+  {
+   "fieldname": "laboratory",
+   "fieldtype": "Link",
+   "label": "Laboratory",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "date_of_receipt",
+   "fieldtype": "Date",
+   "label": "Date of Receipt"
+  },
+  {
+   "fieldname": "sample_required_tests",
+   "fieldtype": "Table",
+   "label": "Sample Required Tests",
+   "options": "Sample Required Tests"
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "Results"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Sample Results",
+   "options": "Sample Results"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Laboratory Analysis",
+   "link_fieldname": "sample_id"
+  }
+ ],
+ "modified": "2023-09-12 06:57:40.371208",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Laboratory Sample",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Technician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Laboratory Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sampling User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sampling Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "description",
+ "translated_doctype": 1
+}
