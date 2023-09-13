@@ -28,6 +28,7 @@
    "allow_in_quick_entry": 1,
    "fieldname": "uom",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "UoM",
    "options": "UOM"
   },
@@ -48,6 +49,7 @@
    "label": "Accredited"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "parameter_name",
    "fieldtype": "Data",
    "label": "Parameter Name"
@@ -55,7 +57,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 00:58:59.952065",
+ "modified": "2023-09-12 17:26:56.028303",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Sampling Analysis Parameter",
