@@ -27,13 +27,14 @@
    "fieldtype": "Data",
    "in_global_search": 1,
    "in_list_view": 1,
-   "label": "Equipment Name"
+   "label": "Equipment Name",
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-13 05:36:12.130432",
+ "modified": "2023-09-13 10:10:00.793703",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Protocol Equipment",

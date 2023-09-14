@@ -329,14 +329,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Sampling Analysis Parameter",
    "link_fieldname": "laboratory_protocol"
   }
  ],
- "modified": "2023-09-12 17:14:33.749646",
+ "modified": "2023-09-14 05:43:07.701513",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Protocol",
@@ -344,8 +343,6 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -358,7 +355,6 @@
    "select": 1,
    "set_user_permissions": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -373,8 +369,6 @@
    "write": 1
   },
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -387,7 +381,6 @@
    "select": 1,
    "set_user_permissions": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],

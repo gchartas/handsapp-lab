@@ -42,8 +42,13 @@
   "received_by",
   "date_of_receipt",
   "sample_required_tests",
+  "posting_date",
   "results_section",
-  "results"
+  "results",
+  "section_break_kgtj4",
+  "signatures",
+  "pdf_attachment",
+  "amended_from"
  ],
  "fields": [
   {
@@ -129,7 +134,8 @@
    "fieldname": "sampling_status",
    "fieldtype": "Select",
    "label": "Sampling Status",
-   "options": "Sampling\nUnder Transport\nUnder Analysis\nAnalyzed"
+   "options": "Sampling\nUnder Transport\nUnder Analysis\nAnalyzed",
+   "print_hide": 1
   },
   {
    "fieldname": "sampling_procedure_section",
@@ -247,16 +253,47 @@
    "fieldtype": "Table",
    "label": "Sample Results",
    "options": "Sample Results"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Laboratory Sample",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kgtj4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signatures",
+   "fieldtype": "Table",
+   "label": "Signatures",
+   "options": "Laboratory Signature Table"
+  },
+  {
+   "fieldname": "pdf_attachment",
+   "fieldtype": "Attach",
+   "label": "PDF attachment"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Completion Date",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Laboratory Analysis",
    "link_fieldname": "sample_id"
   }
  ],
- "modified": "2023-09-12 06:57:40.371208",
+ "modified": "2023-09-14 06:55:43.352555",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Sample",
@@ -264,15 +301,21 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -288,6 +331,8 @@
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -296,7 +341,9 @@
    "read": 1,
    "report": 1,
    "role": "Laboratory Manager",
+   "set_user_permissions": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -321,6 +368,7 @@
    "report": 1,
    "role": "Sampling Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
