@@ -2,7 +2,10 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Laboratory Analysis', {
-	refresh: function(frm){
+    onload: function(frm){
+        toggle_process_section(frm);
+    },
+    refresh: function(frm){
         frm.add_custom_button('Fetch Data', function() {
             clear_and_fetch(frm);
         }, __('Actions'));
@@ -195,5 +198,10 @@ function view_protocol(frm) {
         });
     } else {
         frappe.msgprint("Please select a Laboratory Protocol first.");
+    }
+}
+function toggle_process_section(frm) {
+    if ((!frm.doc.process || frm.doc.process.length === 0) && (!frm.doc.results || frm.doc.results.length === 0)) {
+        clear_and_fetch(frm);
     }
 }

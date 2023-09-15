@@ -3,6 +3,7 @@
 
 frappe.ui.form.on('Laboratory Sample', {
     refresh: function(frm) {
+        toggle_fields_based_on_sampling_status(frm);
         frm.add_custom_button('Process Laboratory Analysis', function() {
             process_lab_analysis(frm);
         });
@@ -12,6 +13,9 @@ frappe.ui.form.on('Laboratory Sample', {
     },
     set_session: function (frm) {
         kronos(frm);
+    },
+    sampling_status: function(frm) {
+        toggle_fields_based_on_sampling_status(frm);
     }
 });
 
@@ -178,5 +182,115 @@ function kronos(frm) {
             indicator: 'orange',
             message: __('Geolocation is not supported by this browser.')
         });
+    }
+}
+
+function toggle_fields_based_on_sampling_status(frm) {
+    const sample_toggle = [
+        'description', 
+        'template', 
+        'sample_type',
+        'batch_number',
+        'laboratory_sample_location',
+        'address',
+        'current_location',
+        'laboratory_sampling_method',
+        'sampler',
+        'sampler_name',
+        'laboratory_equipment',
+        'date',
+        'time',
+        'pre_treatment',
+        'field_measurements'
+    ];
+    const transport_toggle = [
+        'container_type',
+        'preservation_method',
+        'storage_temperature',
+        'transport_conditions'
+    ];
+    const analysis_toggle = [
+        'laboratory',
+        'received_by',
+        'date_of_receipt',
+        'sample_required_tests',
+        'posting_date',
+        'results',
+        'signatures',
+        'pdf_attachment'
+    ];
+
+    
+    const fields_to_toggle = [
+        'description', 
+        'template', 
+        'sample_type',
+        'batch_number',
+        'laboratory_sample_location',
+        'address',
+        'current_location',
+        'laboratory_sampling_method',
+        'sampler',
+        'sampler_name',
+        'laboratory_equipment',
+        'date',
+        'time',
+        'pre_treatment',
+        'field_measurements',
+        'container_type',
+        'preservation_method',
+        'storage_temperature',
+        'transport_conditions',
+        'laboratory',
+        'received_by',
+        'date_of_receipt',
+        'sample_required_tests',
+        'posting_date',
+        'results',
+        'signatures',
+        'pdf_attachment'
+
+        // ... add other fieldnames here if needed
+    ];
+
+    // You can use a switch or if-else. Here's an example with if-else:
+    let status = frm.doc.sampling_status;
+    switch(status){
+        case 'Sampling':
+            fields_to_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', true);
+                frm.set_df_property(field, 'hidden', true);
+            });
+            sample_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', false);
+                frm.set_df_property(field, 'hidden', false);
+            });
+            break;
+        case 'to Transport':
+            sample_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', true);
+                frm.set_df_property(field, 'hidden', false);
+            });    
+            transport_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', false);
+                frm.set_df_property(field, 'hidden', false);
+            });
+            break;
+        case 'to Analyze':
+            transport_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', true);
+                frm.set_df_property(field, 'hidden', false);
+            });
+            analysis_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', false);
+                frm.set_df_property(field, 'hidden', false);
+            });
+            break;
+        case 'Analyzed':
+            fields_to_toggle.forEach(field => {
+                frm.set_df_property(field, 'read_only', true);
+                frm.set_df_property(field, 'hidden', false);
+            });
+            break;
     }
 }

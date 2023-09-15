@@ -6,6 +6,12 @@ frappe.ui.form.on('Laboratory Protocol', {
         // Set the publish_date to today
         frm.set_value('publish_date', frappe.datetime.now_date());
     },
+    refresh: function(frm) {
+        toggle_read_only_fields(frm);
+    },
+    status_doc: function(frm) {
+        toggle_read_only_fields(frm);
+    },
     publish_date: function(frm){
         var p_date = new Date(frm.doc.publish_date);
         var tyfpd = new Date(p_date.setFullYear(p_date.getFullYear() + 3));
@@ -24,3 +30,33 @@ frappe.ui.form.on('Laboratory Protocol', {
         frm.set_value('total_time', total_time);
     }
 });
+
+function toggle_read_only_fields(frm) {
+    const fields = [
+        'rev',
+        'publish_date', 
+        'review_date', 
+        'scope',
+        'terms_and_definitions',
+        'principle',
+        'considerations',
+        'equipment',
+        'reagents',
+        'input',
+        'procedure',
+        'output',
+        'precision_rr',
+        'qc',
+        'records_and_reporting',
+        'references',
+        'protocol_team',
+        'rev_history'
+        // ... add other fieldnames here
+    ];
+
+    const is_readonly = frm.doc.status_doc === 'Published';
+    
+    fields.forEach(field => {
+        frm.set_df_property(field, 'read_only', is_readonly);
+    });
+}

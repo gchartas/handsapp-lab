@@ -13,6 +13,7 @@
   "column_break_3z4fe",
   "section_break_7fnwf",
   "rev",
+  "status_doc",
   "column_break_hyfnc",
   "publish_date",
   "total_time",
@@ -326,16 +327,27 @@
    "precision": "5",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "status_doc",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPublished",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [
   {
+   "link_doctype": "Laboratory Analysis",
+   "link_fieldname": "laboratory_protocol"
+  },
+  {
    "link_doctype": "Sampling Analysis Parameter",
    "link_fieldname": "laboratory_protocol"
   }
  ],
- "modified": "2023-09-14 05:43:07.701513",
+ "modified": "2023-09-15 17:27:07.976942",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Protocol",
