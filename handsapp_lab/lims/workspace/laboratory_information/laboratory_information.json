@@ -28,6 +28,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Laboratory Sample Batch",
+   "link_to": "Sample Batch",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Laboratory Sample",
    "link_to": "Laboratory Sample",
    "link_type": "DocType",
@@ -136,15 +145,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Laboratory Protocol/Method",
-   "link_to": "Laboratory Protocol",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Library",
    "link_to": "Library Management",
    "link_type": "DocType",
@@ -163,10 +163,54 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Analysis Setup",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Protocol/Method",
+   "link_to": "Laboratory Protocol",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Analysis Parameter",
+   "link_to": "Sampling Analysis Parameter",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sampling Method",
+   "link_to": "Laboratory Sampling Method",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Sampling Setup",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Laboratory Sample Location",
+   "link_to": "Laboratory Sample Location",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -180,32 +224,14 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Sampling Analysis Parameter",
-   "link_to": "Sampling Analysis Parameter",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Laboratory Sampling Method",
-   "link_to": "Laboratory Sampling Method",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Laboratory Sample Location",
-   "link_to": "Laboratory Sample Location",
+   "label": "Laboratory Sample Batch Template",
+   "link_to": "Sample Batch Template",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-09-11 00:44:17.619052",
+ "modified": "2023-09-18 08:20:04.550682",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Information",

@@ -8,6 +8,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "smpl_btch",
   "sample_identification_section",
   "naming_series",
   "description",
@@ -32,6 +33,7 @@
   "pre_treatment",
   "environmental_conditions_section",
   "field_measurements",
+  "field_conditions",
   "sample_storage_and_transportation_section",
   "container_type",
   "preservation_method",
@@ -43,6 +45,7 @@
   "received_by",
   "date_of_receipt",
   "sample_required_tests",
+  "req_tests",
   "posting_date",
   "results_section",
   "results",
@@ -289,6 +292,26 @@
   {
    "fieldname": "column_break_loyt4",
    "fieldtype": "Column Break"
+  },
+  {
+   "description": "Weather Conditions, Wind Conditions, Water Ripples and Effects (if surface water)",
+   "fieldname": "field_conditions",
+   "fieldtype": "Small Text",
+   "label": "Field Conditions"
+  },
+  {
+   "fieldname": "smpl_btch",
+   "fieldtype": "Link",
+   "label": "Sample Batch",
+   "options": "Sample Batch"
+  },
+  {
+   "fieldname": "req_tests",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Required Tests",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -298,7 +321,7 @@
    "link_fieldname": "sample_id"
   }
  ],
- "modified": "2023-09-15 14:49:47.038818",
+ "modified": "2023-09-19 07:49:29.948830",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Sample",

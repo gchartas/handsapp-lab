@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-18 08:10:07.770317",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "laboratory_sample_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "laboratory_sample_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Laboratory Sample Template",
+   "options": "Laboratory Sample Template"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-18 08:10:26.715365",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Sample Batch Template Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "translated_doctype": 1
+}

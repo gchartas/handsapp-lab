@@ -6,7 +6,13 @@ frappe.ui.form.on('Laboratory Sample', {
         toggle_fields_based_on_sampling_status(frm);
         frm.add_custom_button('Process Laboratory Analysis', function() {
             process_lab_analysis(frm);
-        });
+        }, __('Actions'));
+        frm.add_custom_button('Update FC and RT', function() {
+            add_data_to_field_conditions(frm);
+            update_required_tests_field(frm);
+        }, __('Actions'));
+
+        check_entries(frm)
     },
     template: function(frm) {
         populate_from_template(frm);
@@ -213,7 +219,6 @@ function toggle_fields_based_on_sampling_status(frm) {
         'laboratory',
         'received_by',
         'date_of_receipt',
-        'sample_required_tests',
         'posting_date',
         'results',
         'signatures',
@@ -244,7 +249,6 @@ function toggle_fields_based_on_sampling_status(frm) {
         'laboratory',
         'received_by',
         'date_of_receipt',
-        'sample_required_tests',
         'posting_date',
         'results',
         'signatures',
@@ -294,3 +298,72 @@ function toggle_fields_based_on_sampling_status(frm) {
             break;
     }
 }
+
+function check_entries(frm){
+    // Check if 'template' field is filled
+    if (frm.doc.template) {
+        // Initialize a flag to determine if any of the conditions are met
+        let showAlert = false;
+
+        // Check if 'field_measurements' child table is empty
+        if (frm.doc.field_measurements.length === 0) {
+            showAlert = true;
+        }
+
+        // Check if 'sample_required_tests' child table is empty
+        if (frm.doc.sample_required_tests.length === 0) {
+            showAlert = true;
+        }
+
+        // Check if 'results' child table is empty
+        if (frm.doc.results.length === 0) {
+            showAlert = true;
+        }
+
+        // Show the alert if any of the conditions are met
+        if (showAlert) {
+            populate_from_template(frm);
+        }
+    }
+}
+
+function add_data_to_field_conditions(frm) {
+    let formatted_data = [];
+
+    // Loop through the 'Sample Field Measurements' child table
+    $.each(frm.doc.field_measurements, function(index, row) {
+        // Construct the data string, skipping undefined or empty values
+        let data_parts = [];
+
+        if (row.parameter) {
+            data_parts.push(row.parameter);
+        }
+        if (row.value !== undefined && row.value !== null) {
+            data_parts.push(`${row.value}`);
+        }
+        if (row.uom) {
+            data_parts.push(row.uom);
+        }
+
+        formatted_data.push(data_parts.join(': '));
+    });
+
+    // Join the formatted data with commas and append it to the 'Field Conditions' field
+    let existing_data = frm.doc.field_conditions ? frm.doc.field_conditions + ", " : "";
+    frm.set_value('field_conditions', existing_data + formatted_data.join(', '));
+
+    // Refresh the form to show the updated data
+    frm.refresh_field('field_conditions');
+}
+
+function update_required_tests_field(frm) {
+    // Concatenate the 'parameter' values from the 'sample_required_tests' child table
+    let concatenated_parameters = frm.doc.sample_required_tests.map(row => row.parameter).join(', ');
+
+    // Update the 'req_tests' field in the parent form
+    frm.set_value('req_tests', concatenated_parameters);
+
+    // Refresh the form to show the updated data
+    frm.refresh_field('req_tests');
+}
+

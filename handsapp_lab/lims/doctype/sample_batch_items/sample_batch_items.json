@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-18 07:10:56.129947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "smpl_template",
+  "lab_sample",
+  "description",
+  "sample_type",
+  "date",
+  "sampler_name",
+  "field_conditions",
+  "req_tests",
+  "sample_status"
+ ],
+ "fields": [
+  {
+   "fetch_from": "lab_sample.description",
+   "fetch_if_empty": 1,
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "lab_sample",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Laboratory Sample",
+   "options": "Laboratory Sample"
+  },
+  {
+   "fieldname": "smpl_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Laboratory Sample Template",
+   "options": "Laboratory Sample Template",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "lab_sample.sample_type",
+   "fieldname": "sample_type",
+   "fieldtype": "Data",
+   "label": "Sample Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lab_sample.sampler_name",
+   "fieldname": "sampler_name",
+   "fieldtype": "Data",
+   "label": "Sampler Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lab_sample.field_conditions",
+   "fieldname": "field_conditions",
+   "fieldtype": "Small Text",
+   "label": "Field Conditions",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lab_sample.sampling_status",
+   "fieldname": "sample_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sample Status",
+   "print_hide": 1,
+   "read_only": 1,
+   "translatable": 1
+  },
+  {
+   "fetch_from": "lab_sample.req_tests",
+   "fieldname": "req_tests",
+   "fieldtype": "Small Text",
+   "label": "Required Tests",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-19 07:50:16.612386",
+ "modified_by": "Administrator",
+ "module": "LIMS",
+ "name": "Sample Batch Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
