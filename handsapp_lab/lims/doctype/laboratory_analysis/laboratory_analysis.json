@@ -46,6 +46,7 @@
    "options": "Laboratory Protocol"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "sample_id",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -172,7 +173,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-15 18:09:55.902516",
+ "modified": "2023-10-25 18:51:10.184661",
  "modified_by": "Administrator",
  "module": "LIMS",
  "name": "Laboratory Analysis",
